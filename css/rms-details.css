@@ -1,0 +1,373 @@
+/* =========================================
+   GLOBAL VARIABLES & COLOR SCHEME
+   ========================================= */
+:root {
+  --primary-color: #0a192f;
+  --secondary-color: #189ab4;
+  --accent-gold: #d97706;
+  --heading-color: #1f2937;
+  --text-dark: #1f2937;
+  --text-gray: #6b7280;
+  --bg-light: #f8fafc;
+  --white: #ffffff;
+  --font-family:
+    system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --gold-gradient: linear-gradient(135deg, #d98806 0%, #ffc436 100%);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-family);
+  color: var(--text-dark);
+  background-color: var(--bg-light);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* =========================================
+   RMS DETAILS HERO SECTION
+   ========================================= */
+.rms-hero {
+  background: linear-gradient(135deg, #0a192f 0%, #0c356a 100%);
+  color: var(--white);
+  padding: 3.5rem 0 3rem;
+  text-align: center;
+  margin-top: 100px;
+}
+
+.rms-container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+.rms-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 0.75rem;
+}
+
+.rms-eyebrow-bar {
+  width: 24px;
+  height: 3px;
+  background: var(--accent-gold);
+  border-radius: 2px;
+}
+
+.rms-eyebrow-text {
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: #ffc436;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.rms-hero h1 {
+  line-height: 1.18;
+  font-size: 2.85rem;
+  font-weight: 800;
+  color: var(--white);
+  margin-bottom: 0.5rem;
+}
+
+.rms-hero-subtitle {
+  font-size: 1.05rem;
+  color: #cbd5e1;
+  font-weight: 400;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* =========================================
+   RMS CONTENT CARDS & HOVER EFFECTS
+   ========================================= */
+.rms-section {
+  padding: 2.5rem 0 4rem;
+}
+
+.rms-card {
+  background: var(--white);
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 8px 24px rgba(10, 25, 47, 0.04);
+  margin-bottom: 2rem;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.rms-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(10, 25, 47, 0.08);
+  border-color: rgba(217, 119, 6, 0.3);
+}
+
+.rms-card h2 {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.rms-card h2 i {
+  color: var(--accent-gold);
+  transition: transform 0.3s ease;
+}
+
+.rms-card:hover h2 i {
+  transform: scale(1.15) rotate(5deg);
+}
+
+.rms-card p {
+  font-size: 0.95rem;
+  color: #475569;
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+
+/* =========================================
+   TABLE STYLES & INTERACTIVE HOVERS
+   ========================================= */
+.table-responsive {
+  width: 100%;
+  margin: 1.25rem 0;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid #e2e8f0;
+}
+
+.rms-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 0.9rem;
+}
+
+.rms-table th {
+  background-color: var(--primary-color);
+  color: var(--white);
+  font-weight: 700;
+  padding: 0.9rem 1.1rem;
+  text-transform: uppercase;
+  font-size: 0.78rem;
+  letter-spacing: 0.5px;
+}
+
+.rms-table td {
+  padding: 0.85rem 1.1rem;
+  color: #334155;
+  border-bottom: 1px solid #f1f5f9;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.rms-table tbody tr:nth-child(even) {
+  background-color: #f8fafc;
+}
+
+.rms-table tbody tr:hover {
+  background-color: rgba(217, 119, 6, 0.08);
+}
+
+.rms-table tbody tr:hover td {
+  color: var(--primary-color);
+}
+
+.highlight-row td {
+  background: rgba(217, 119, 6, 0.06);
+  font-weight: 700;
+}
+
+/* =========================================
+   NOTE BOX / CALLOUTS
+   ========================================= */
+.rms-notes {
+  background: rgba(217, 119, 6, 0.05);
+  border-left: 4px solid var(--accent-gold);
+  border-radius: 0 10px 10px 0;
+  padding: 1.25rem;
+  margin-top: 1.25rem;
+}
+
+.rms-notes h4 {
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.rms-notes h4 i {
+  color: var(--accent-gold);
+}
+
+.rms-notes ul {
+  list-style-type: disc;
+  padding-left: 1.25rem;
+  color: #475569;
+  font-size: 0.9rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+@media (max-width: 768px) {
+  .rms-hero {
+    padding: 2.5rem 0 2rem;
+  }
+
+  .rms-hero h1 {
+    font-size: 1.6rem;
+  }
+
+  .rms-card {
+    padding: 1rem 0.75rem;
+    border-radius: 12px;
+  }
+
+  /* Table responsiveness converted into cards */
+  .table-responsive {
+    border: none;
+    overflow-x: visible;
+  }
+
+  .rms-table,
+  .rms-table tbody,
+  .rms-table tr,
+  .rms-table td {
+    display: block;
+    width: 100% !important;
+  }
+
+  .rms-table thead {
+    display: none;
+  }
+
+  .rms-table tbody tr {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    margin-bottom: 0.85rem;
+    padding: 0.6rem 0.75rem;
+    box-shadow: 0 2px 6px rgba(10, 25, 47, 0.04);
+  }
+
+  .rms-table td {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    padding: 0.4rem 0;
+    border-bottom: 1px dashed #e2e8f0;
+    word-break: break-word;
+  }
+
+  .rms-table td:last-child {
+    border-bottom: none;
+  }
+
+  .rms-table td::before {
+    content: attr(data-label);
+    font-weight: 800;
+    color: var(--primary-color);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 0.2rem;
+  }
+}
+
+/* =========================================
+   STYLISH MOBILE CARD VIEW WITH BACKGROUND
+   ========================================= */
+@media (max-width: 768px) {
+  .rms-card {
+    padding: 1rem 0.75rem;
+    border-radius: 12px;
+  }
+
+  /* Table responsiveness converted into cards */
+  .table-responsive {
+    border: none;
+    overflow-x: visible;
+  }
+
+  .rms-table,
+  .rms-table tbody,
+  .rms-table tr,
+  .rms-table td {
+    display: block;
+    width: 100% !important;
+  }
+
+  .rms-table thead {
+    display: none;
+  }
+
+  /* Each Row converted into a Styled Container with Background Color */
+  .rms-table tbody tr {
+    background: #f8fafc; /* Subtle light background color */
+    border: 1px solid #cbd5e1;
+    border-left: 4px solid var(--accent-gold); /* Gold side accent bar */
+    border-radius: 12px;
+    margin-bottom: 1.25rem;
+    padding: 0.85rem 1rem;
+    box-shadow: 0 4px 12px rgba(10, 25, 47, 0.06);
+  }
+
+  /* Highlight rows (Totals / Interviews) with different accent background */
+  .rms-table tbody tr.highlight-row {
+    background: #fffbe3;
+    border-left-color: var(--primary-color);
+  }
+
+  /* Stacking Cells Vertically */
+  .rms-table td {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    padding: 0.5rem 0;
+    border-bottom: 1px dashed #cbd5e1;
+    word-break: break-word;
+    font-size: 0.9rem;
+    color: var(--text-dark);
+  }
+
+  .rms-table td:last-child {
+    border-bottom: none;
+  }
+
+  /* Top Heading Badge inside each card field */
+  .rms-table td::before {
+    content: attr(data-label);
+    display: inline-block;
+    font-weight: 800;
+    color: var(--primary-color);
+    background-color: #e2e8f0; /* Heading background pill */
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    padding: 2px 8px;
+    border-radius: 4px;
+    margin-bottom: 0.35rem;
+    width: fit-content;
+  }
+}

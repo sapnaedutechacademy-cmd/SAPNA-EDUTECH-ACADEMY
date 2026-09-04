@@ -1,0 +1,219 @@
+/* =========================================
+           GLOBAL VARIABLES & COLOR SCHEME
+           ========================================= */
+:root {
+  --primary-color: #0a192f;
+  --secondary-color: #0c356a;
+  --accent-gold: #d98806;
+  --accent-gold-light: #ffc436;
+
+  --heading-color: #0a192f;
+  --text-dark: #1e293b;
+  --text-gray: #64748b;
+  --bg-light: #f0f4f8;
+  --white: #ffffff;
+
+  --font-family:
+    system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+
+  --hero-gradient: linear-gradient(135deg, #0a192f 0%, #0c356a 100%);
+  --gold-gradient: linear-gradient(135deg, #d98806 0%, #ffc436 100%);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-family);
+  color: var(--text-dark);
+  background-color: var(--bg-light);
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* =========================================
+           RMS HERO SECTION
+           ========================================= */
+.rms-hero {
+  background: var(--hero-gradient);
+  color: var(--white);
+  padding: 3.5rem 0 3rem;
+  text-align: center;
+  margin-top: 100px;
+}
+
+.rms-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.rms-eyebrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  margin-bottom: 1rem;
+}
+
+.rms-eyebrow-bar {
+  width: 24px;
+  height: 3px;
+  background: var(--gold-gradient);
+  border-radius: 2px;
+}
+
+.rms-eyebrow-text {
+  font-size: 0.8rem;
+  font-weight: 800;
+  color: var(--accent-gold-light);
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.rms-hero h1 {
+  font-size: 2.85rem;
+  line-height: 1.18;
+  font-weight: 800;
+  margin-bottom: 0.75rem;
+  letter-spacing: -0.5px;
+}
+
+.rms-hero-subtitle {
+  font-size: 1.05rem;
+  color: #cbd5e1;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* =========================================
+           ACCORDION SPECIFIC STYLES FOR CLASS 9
+           ========================================= */
+.rms-section {
+  padding: 4rem 1.5rem;
+}
+
+.accordion-wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.accordion-item {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(10, 25, 47, 0.04);
+  transition: all 0.3s ease;
+}
+
+.accordion-item:hover {
+  border-color: #2563eb;
+  box-shadow: 0 6px 16px rgba(10, 25, 47, 0.08);
+}
+
+.accordion-header {
+  width: 100%;
+  background-color: #ffffff;
+  border: none;
+  padding: 1.25rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #0f172a;
+  cursor: pointer;
+  text-align: left;
+  transition: background-color 0.2s ease;
+}
+
+.accordion-header span {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.accordion-header span i {
+  color: var(--accent-gold);
+  font-size: 1.2rem;
+}
+
+.arrow-icon {
+  font-size: 0.9rem;
+  color: #64748b;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.accordion-item.active .arrow-icon {
+  transform: rotate(180deg);
+  color: var(--accent-gold);
+}
+
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 1.5rem;
+  background-color: #fafbfc;
+  border-top: 0px solid transparent;
+  transition:
+    max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+    padding 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.accordion-item.active .accordion-content {
+  max-height: 1500px;
+  padding: 1.25rem 1.5rem 1.75rem 1.5rem;
+  border-top: 1px solid #f1f5f9;
+}
+
+.accordion-content p {
+  font-size: 0.95rem;
+  color: #475569;
+  margin-bottom: 1rem;
+}
+
+.sub-heading {
+  font-size: 1.02rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 1rem 0 0.5rem 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.syllabus-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 1rem;
+}
+
+.tag {
+  background-color: #f1f5f9;
+  color: #334155;
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 0.45rem 0.85rem;
+  border-radius: 6px;
+  border: 1px solid #e2e8f0;
+  transition: all 0.2s ease;
+}
+
+.tag:hover {
+  background-color: #0f172a;
+  color: #ffffff;
+  border-color: #0f172a;
+}

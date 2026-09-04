@@ -1,0 +1,280 @@
+/* =========================================
+   GLOBAL VARIABLES & COLOR SCHEME
+   ========================================= */
+:root {
+  --primary-color: #0a192f;
+  --secondary-color: #0c356a;
+  --accent-gold: #d98806;
+  --accent-gold-light: #ffc436;
+
+  --heading-color: #0a192f;
+  --text-dark: #1e293b;
+  --text-gray: #64748b;
+  --bg-light: #f0f4f8;
+  --white: #ffffff;
+
+  --font-family:
+    system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+
+  --hero-gradient: linear-gradient(135deg, #0a192f 0%, #0c356a 100%);
+  --gold-gradient: linear-gradient(135deg, #d98806 0%, #ffc436 100%);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-family);
+  color: var(--text-dark);
+  background-color: var(--bg-light);
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Color Palette & Variables */
+:root {
+  --ss-navy: #0b192c;
+  --ss-navy-light: #1e3e62;
+  --ss-gold: #d97706;
+  --ss-gold-light: #fffbe2;
+  --ss-bg: #f4f6f9;
+  --ss-card-bg: #ffffff;
+  --ss-text-main: #1e293b;
+  --ss-text-muted: #64748b;
+  --ss-border: #e2e8f0;
+  --ss-border-accent: #0b192c;
+  --ss-shadow: 0 4px 18px rgba(0, 0, 0, 0.05);
+  --ss-shadow-hover: 0 10px 25px rgba(11, 25, 44, 0.12);
+}
+
+/* SECTION WRAPPERS */
+.ss-hero {
+  background-color: var(--ss-bg);
+  padding: 4rem 1.5rem 4rem 1.5rem;
+  text-align: center;
+  margin-top: 100px;
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    sans-serif;
+}
+
+.ss-hero-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.ss-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.ss-eyebrow-line {
+  width: 30px;
+  height: 2px;
+  background-color: var(--ss-gold);
+}
+
+.ss-eyebrow-text {
+  color: var(--ss-gold);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.ss-hero-title {
+  color: var(--ss-navy);
+  font-size: 2.85rem;
+  line-height: 1.18;
+  font-weight: 800;
+  margin: 0.25rem 0 0.5rem 0;
+}
+
+.ss-hero-subtitle {
+  color: var(--ss-text-muted);
+  font-size: 1.05rem;
+  font-style: italic;
+  margin: 0;
+}
+
+.ss-section {
+  background-color: var(--ss-bg);
+  padding: 1.5rem 1.5rem 4rem 1.5rem;
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    sans-serif;
+}
+
+.ss-container {
+  max-width: 950px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* CARD & HOVER EFFECTS */
+.ss-card {
+  background-color: var(--ss-card-bg);
+  border-radius: 10px;
+  border: 1px solid var(--ss-border);
+  border-left: 5px solid var(--ss-navy); /* Left Border Accent */
+  box-shadow: var(--ss-shadow);
+  padding: 1.75rem 2rem;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.ss-card:hover {
+  transform: translateY(-4px); /* Hover Elevation */
+  box-shadow: var(--ss-shadow-hover);
+  border-left-color: var(--ss-gold); /* Hover Color Transition */
+}
+
+.ss-card-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px dashed var(--ss-border);
+}
+
+.ss-card-icon {
+  font-size: 1.35rem;
+  color: var(--ss-gold);
+  background-color: #fef3c7;
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ss-card-heading {
+  color: var(--ss-navy);
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.ss-card-body {
+  color: var(--ss-text-main);
+}
+
+.ss-text {
+  line-height: 1.7;
+  font-size: 0.98rem;
+  color: #334155;
+  margin: 0 0 1rem 0;
+}
+
+.ss-text:last-child {
+  margin-bottom: 0;
+}
+
+/* DATA TABLES & STYLING */
+.ss-table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.ss-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 0.5rem;
+  text-align: left;
+  font-size: 0.93rem;
+}
+
+.ss-table th {
+  background-color: var(--ss-navy);
+  color: #ffffff;
+  font-weight: 600;
+  padding: 0.85rem 1rem;
+  border: 1px solid var(--ss-navy);
+}
+
+.ss-table td {
+  padding: 0.85rem 1rem;
+  border: 1px solid var(--ss-border);
+  color: var(--ss-text-main);
+  vertical-align: middle;
+}
+
+.ss-table tbody tr {
+  transition: background-color 0.2s ease;
+}
+
+.ss-table tbody tr:hover {
+  background-color: #f8fafc;
+}
+
+.ss-table-striped tbody tr:nth-child(even) {
+  background-color: #f8fafc;
+}
+
+.ss-badge {
+  background-color: #e0e7ff;
+  color: #3730a3;
+  padding: 0.25rem 0.6rem;
+  border-radius: 4px;
+  font-weight: 700;
+  font-size: 0.85rem;
+}
+
+.ss-highlight {
+  color: #047857;
+  font-weight: 600;
+}
+
+.ss-highlight-bold {
+  color: var(--ss-gold);
+  font-weight: 700;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 640px) {
+  .ss-hero-title {
+    font-size: 1.75rem;
+  }
+  .ss-card {
+    padding: 1.25rem;
+  }
+  .ss-table th,
+  .ss-table td {
+    padding: 0.65rem 0.75rem;
+    font-size: 0.85rem;
+  }
+}
+
+/* =========================================
+   RESPONSIVE DESIGN (Media Queries)
+   ========================================= */
+@media (max-width: 992px) {
+  .hero-container,
+  .sa-about-grid,
+  .contact-grid,
+  .why-us-grid,
+  .gallery-grid,
+  .gg-cards-grid {
+    grid-template-columns: 1fr;
+  }
+}

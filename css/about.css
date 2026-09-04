@@ -1,0 +1,571 @@
+/* =========================================
+   GLOBAL VARIABLES & COLOR SCHEME
+   ========================================= */
+:root {
+  --primary-color: #0a192f;
+  --secondary-color: #189ab4;
+  --accent-gold: #d97706;
+  --heading-color: #1f2937;
+  --text-dark: #1f2937;
+  --text-gray: #6b7280;
+  --bg-light: #f8fafc;
+  --white: #ffffff;
+  --font-family:
+    system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --gold-gradient: linear-gradient(135deg, #d98806 0%, #ffc436 100%);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-family);
+  color: var(--text-dark);
+  background-color: var(--bg-light);
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* =========================================
+   ABOUT US PAGE CONTENT STYLES
+   ========================================= */
+.about-page {
+  font-family: var(--font-family);
+  color: #334155;
+  background-color: var(--white);
+}
+
+.about-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.about-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 0.75rem;
+}
+
+.about-eyebrow-bar {
+  width: 24px;
+  height: 3px;
+  background: var(--accent-gold);
+  border-radius: 2px;
+}
+
+.about-eyebrow-text {
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: var(--accent-gold);
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.about-hero-section {
+  position: relative;
+  padding: 4rem 5rem;
+  background: linear-gradient(135deg, #f0f4f8 0%, #ffffff 100%);
+  overflow: hidden;
+  margin-top: 100px;
+}
+
+@media (max-width: 576px) {
+  .about-hero-section .about-container {
+    padding: 2.5rem 0rem;
+  }
+}
+
+.about-hero-section .about-container {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  position: relative;
+  z-index: 2;
+}
+
+.about-hero-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.about-hero-content h1 {
+  font-size: 2.85rem;
+  font-weight: 800;
+  color: var(--primary-color);
+  line-height: 1.18;
+  margin-bottom: 1.25rem;
+  letter-spacing: -0.5px;
+}
+
+.about-hero-content p {
+  font-size: 1.05rem;
+  line-height: 1.65;
+  color: #475569;
+  margin-bottom: 2rem;
+  max-width: 580px;
+}
+
+.experience-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background: rgba(217, 119, 6, 0.1);
+  border: 1px solid rgba(217, 119, 6, 0.25);
+  padding: 0.6rem 1.2rem;
+  border-radius: 10px;
+  color: var(--primary-color);
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+.experience-badge i {
+  color: var(--accent-gold);
+}
+
+.about-image-card {
+  position: relative;
+  border-radius: 24px;
+  background: var(--white);
+  padding: 10px;
+  box-shadow: 0 20px 40px rgba(10, 25, 47, 0.12);
+  display: block;
+  width: 100%;
+}
+
+.about-image-card .img-wrapper {
+  width: 100%;
+  border-radius: 16px;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.about-image-card img {
+  width: 100%;
+  height: 440px;
+  object-fit: cover;
+  display: block;
+}
+
+.academics-section {
+  padding: 4rem 0 5rem;
+}
+
+.academic-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.academic-header h2 {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--primary-color);
+  line-height: 1.3;
+  margin: 0;
+}
+
+.academics-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin-top: 2.5rem;
+}
+
+.academic-card {
+  background: var(--white);
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 2.25rem;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(10, 25, 47, 0.04);
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.academic-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--accent-gold);
+}
+
+.academic-card::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(
+    90deg,
+    var(--primary-color) 0%,
+    var(--accent-gold) 100%
+  );
+}
+
+.academic-card-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 12px;
+  background: var(--primary-color);
+  color: var(--accent-gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.35rem;
+  margin-bottom: 1.25rem;
+}
+
+.academic-card h3 {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--primary-color);
+  margin-bottom: 0.75rem;
+}
+
+.academic-card p {
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: #64748b;
+  margin: 0;
+}
+
+.location-box {
+  margin-top: 1.25rem;
+  font-size: 0.88rem;
+  color: var(--primary-color);
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.specialties-section {
+  padding: 5rem 0;
+  background-color: #f8fafc;
+}
+
+.specialties-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-top: 2.5rem;
+}
+
+.specialty-box {
+  background: var(--white);
+  border-radius: 18px;
+  padding: 2.25rem;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 6px 20px rgba(10, 25, 47, 0.03);
+}
+
+.specialty-box h3 {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.specialty-box h3 i {
+  color: var(--accent-gold);
+}
+
+.specialty-box p {
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: #64748b;
+  margin-bottom: 1.25rem;
+}
+
+.tag-cloud {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tag-item {
+  background: #f1f5f9;
+  color: var(--primary-color);
+  font-size: 0.82rem;
+  font-weight: 700;
+  padding: 0.35rem 0.75rem;
+  border-radius: 6px;
+  border: 1px solid #e2e8f0;
+}
+
+.values-section {
+  padding-top: 2.5rem;
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 3.5rem;
+}
+
+.value-pill-card {
+  position: relative;
+  background: var(--white);
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(10, 25, 47, 0.03);
+  overflow: hidden;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.value-pill-card::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 4px;
+  background: linear-gradient(
+    90deg,
+    var(--primary-color) 0%,
+    var(--accent-gold) 100%
+  );
+  border-bottom-left-radius: 14px;
+  transition: width 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.value-pill-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(10, 25, 47, 0.08);
+}
+
+.value-pill-card:hover::before {
+  width: 100%;
+}
+
+.value-pill-card i {
+  font-size: 1.8rem;
+  color: var(--accent-gold);
+  margin-bottom: 0.75rem;
+}
+
+.value-pill-card h4 {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: var(--primary-color);
+  margin-bottom: 0.4rem;
+}
+
+.value-pill-card p {
+  font-size: 0.88rem;
+  color: #64748b;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.motto-card-wrapper {
+  position: relative;
+  background: var(--white);
+  border: 1px solid #e2e8f0;
+  border-left: 5px solid var(--accent-gold);
+  border-radius: 16px;
+  padding: 3rem 2.5rem;
+  box-shadow: 0 10px 30px rgba(10, 25, 47, 0.05);
+  overflow: hidden;
+  margin: 3.5rem 0;
+}
+
+.motto-header {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 0.75rem;
+}
+
+.motto-header-bar {
+  width: 20px;
+  height: 3px;
+  background: var(--accent-gold);
+  border-radius: 2px;
+}
+
+.motto-badge {
+  font-size: 0.8rem;
+  font-weight: 800;
+  color: var(--accent-gold);
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.motto-quote {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--primary-color);
+  margin-bottom: 0.85rem;
+  line-height: 1.25;
+  position: relative;
+  z-index: 1;
+}
+
+.motto-text {
+  font-size: 1rem;
+  color: #475569;
+  max-width: 780px;
+  line-height: 1.65;
+  margin: 0;
+  position: relative;
+  z-index: 1;
+}
+
+.cta-compact-wrapper {
+  padding: 3rem 1.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.cta-compact-card {
+  width: 100%;
+  max-width: 850px;
+  background: linear-gradient(135deg, var(--primary-color) 0%, #092c3e 100%);
+  border: 1px solid rgba(217, 119, 6, 0.3);
+  border-radius: 20px;
+  padding: 2.75rem 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2.5rem;
+  box-shadow: 0 15px 35px rgba(10, 25, 47, 0.18);
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-compact-content h3 {
+  color: var(--white);
+  font-size: 1.55rem;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+}
+
+.cta-compact-content p {
+  color: #94a3b8;
+  font-size: 0.95rem;
+}
+
+.cta-compact-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--accent-gold);
+  color: var(--white);
+  font-weight: 700;
+  font-size: 0.8rem;
+  padding: 0.9rem 1.8rem;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.cta-compact-btn:hover {
+  background: #f59e0b;
+  transform: translateY(-2px);
+}
+
+/* =========================================
+   CLEAN & STREAMLINED RESPONSIVE MEDIA QUERIES
+   ========================================= */
+
+@media (max-width: 992px) {
+  .about-hero-grid,
+  .academics-grid,
+  .specialties-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .values-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-hero-content h1 {
+    font-size: 2.1rem;
+  }
+
+  .academic-header h2 {
+    font-size: 1.6rem;
+  }
+
+  .motto-quote {
+    font-size: 1.5rem;
+  }
+
+  .values-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cta-compact-card {
+    flex-direction: column;
+    text-align: center;
+    padding: 2.25rem 1.75rem;
+  }
+
+  .motto-card-wrapper {
+    padding: 2rem 1.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .about-hero-section {
+    padding: 3rem 1.25rem;
+  }
+
+  .about-hero-content h1 {
+    font-size: 1.75rem;
+  }
+
+  .about-hero-content p {
+    font-size: 0.95rem;
+  }
+
+  .academics-section,
+  .specialties-section {
+    padding: 3rem 0;
+  }
+
+  .academic-card,
+  .specialty-box,
+  .value-pill-card {
+    padding: 1.5rem;
+  }
+
+  .academic-card h3,
+  .specialty-box h3 {
+    font-size: 1.2rem;
+  }
+
+  .motto-quote {
+    font-size: 1.35rem;
+  }
+
+  .cta-compact-content h3 {
+    font-size: 1.3rem;
+  }
+}

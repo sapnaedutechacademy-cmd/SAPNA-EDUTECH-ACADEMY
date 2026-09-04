@@ -1,0 +1,300 @@
+/* =========================================
+   GLOBAL VARIABLES & COLOR SCHEME
+   ========================================= */
+:root {
+  --primary-color: #0a192f;
+  --secondary-color: #189ab4;
+  --accent-gold: #d97706;
+  --heading-color: #1f2937;
+  --text-dark: #1f2937;
+  --text-gray: #6b7280;
+  --bg-light: #f8fafc;
+  --white: #ffffff;
+  --font-family:
+    system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --gold-gradient: linear-gradient(135deg, #d98806 0%, #ffc436 100%);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-family);
+  color: var(--text-dark);
+  background-color: var(--bg-light);
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* =========================================
+   CONTACT HERO SECTION
+   ========================================= */
+.contact-hero {
+  background: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);
+  padding: 4rem 0 2.5rem;
+  text-align: center;
+  margin-top: 100px;
+}
+
+.contact-container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.contact-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 0.75rem;
+}
+
+.contact-eyebrow-bar {
+  width: 24px;
+  height: 3px;
+  background: var(--accent-gold);
+  border-radius: 2px;
+}
+
+.contact-eyebrow-text {
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: var(--accent-gold);
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.contact-hero h1 {
+  font-size: 2.85rem;
+  line-height: 1.18;
+  font-weight: 800;
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+}
+
+.hero-subtitle {
+  font-size: 1.1rem;
+  color: #475569;
+  font-weight: 600;
+  font-style: italic;
+}
+
+/* =========================================
+   CONTACT GRID & CARDS
+   ========================================= */
+.contact-section {
+  padding: 2rem 0 5rem;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 2.5rem;
+  margin-bottom: 3rem;
+}
+
+.contact-info-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.info-card {
+  background: var(--white);
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  padding: 1.5rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 1.25rem;
+  box-shadow: 0 4px 15px rgba(10, 25, 47, 0.03);
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.info-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--accent-gold);
+}
+
+.icon-box {
+  width: 48px;
+  height: 48px;
+  min-width: 48px;
+  background: var(--primary-color);
+  color: var(--accent-gold);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+}
+
+.info-details h3 {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: var(--primary-color);
+  margin-bottom: 0.35rem;
+}
+
+.info-details p {
+  font-size: 0.95rem;
+  color: #475569;
+  line-height: 1.5;
+}
+
+.info-details a {
+  color: #475569;
+  transition: color 0.2s ease;
+}
+
+.info-details a:hover {
+  color: var(--accent-gold);
+}
+
+/* =========================================
+   CONTACT FORM
+   ========================================= */
+.contact-form-card {
+  background: var(--white);
+  border: 1px solid #e2e8f0;
+  border-radius: 18px;
+  padding: 2.25rem;
+  box-shadow: 0 10px 30px rgba(10, 25, 47, 0.05);
+}
+
+.contact-form-card h2 {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+}
+
+.contact-form-card > p {
+  font-size: 0.92rem;
+  color: #64748b;
+  margin-bottom: 1.5rem;
+}
+
+.form-group {
+  margin-bottom: 1.2rem;
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 0.4rem;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-family: inherit;
+  outline: none;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: var(--accent-gold);
+  box-shadow: 0 0 0 3px rgba(217, 119, 6, 0.15);
+}
+
+.submit-btn {
+  width: 100%;
+  background: var(--accent-gold);
+  color: var(--white);
+  border: none;
+  border-radius: 10px;
+  padding: 0.9rem;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition:
+    background 0.3s ease,
+    transform 0.2s ease;
+}
+
+.submit-btn:hover {
+  background: #f59e0b;
+  transform: translateY(-2px);
+}
+
+/* =========================================
+   BANNER / MOTTO CARD
+   ========================================= */
+.guidance-banner {
+  background: linear-gradient(135deg, var(--primary-color) 0%, #092c3e 100%);
+  border-left: 5px solid var(--accent-gold);
+  border-radius: 16px;
+  padding: 2.5rem 3rem;
+  color: var(--white);
+  box-shadow: 0 15px 35px rgba(10, 25, 47, 0.12);
+}
+
+.guidance-banner h3 {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--accent-gold);
+  margin-bottom: 0.75rem;
+}
+
+.guidance-banner p {
+  font-size: 0.98rem;
+  line-height: 1.7;
+  color: #cbd5e1;
+}
+/* =========================================
+   CONTACT RESPONSIVE & MOBILE STYLES
+   ========================================= */
+@media (max-width: 992px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 576px) {
+  /* Fix layout padding & alignment on mobile screens */
+  .contact-hero,
+  .contact-section {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  .contact-container {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Equal inner padding for cards and form */
+  .info-card,
+  .contact-form-card,
+  .guidance-banner {
+    padding: 1.25rem !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+}

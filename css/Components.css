@@ -1,0 +1,420 @@
+/* =========================================
+   HEADER & BRAND LOGO
+   ========================================= */
+header,
+.header,
+#header-placeholder {
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.header {
+  background-color: var(--white);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 5%;
+  height: 100px;
+  box-shadow: 0 2px 10px rgba(10, 25, 47, 0.05);
+}
+
+.brand-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  height: 100%;
+  position: relative;
+  z-index: 10;
+}
+
+#header-placeholder a,
+.nav-links a,
+.btn-contact {
+  text-decoration: none !important;
+}
+
+.btn-contact {
+  background: #d97706 !important;
+  color: #ffffff !important;
+}
+
+.logo-image {
+  height: 115px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+  transform: translateY(4px);
+  filter: contrast(1.15) brightness(0.95);
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.brand-logo:hover .logo-image {
+  transform: translateY(4px) scale(1.08);
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 1.75rem;
+  align-items: center;
+}
+
+.nav-links a {
+  color: var(--text-dark);
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: var(--accent-gold);
+}
+
+/* MOBILE TOGGLE BUTTON STYLES */
+.menu-toggle {
+  display: none;
+  font-size: 1.4rem;
+  color: var(--primary-color);
+  background-color: #f1f5f9;
+  padding: 0.5rem 0.75rem;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(10, 25, 47, 0.05);
+}
+
+.menu-toggle:hover,
+.menu-toggle:active {
+  background-color: var(--primary-color);
+  color: var(--white);
+}
+
+/* HEADER DROPDOWN MENU STYLES */
+.nav-links .dropdown {
+  position: relative;
+}
+
+.nav-links .dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: var(--white, #ffffff);
+  min-width: 220px;
+  box-shadow: 0 10px 25px rgba(10, 25, 47, 0.1);
+  border-radius: 8px;
+  list-style: none;
+  padding: 0.5rem 0;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: all 0.3s ease;
+  z-index: 1100;
+  border: 1px solid #e2e8f0;
+}
+
+.nav-links .dropdown:hover .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.nav-links .dropdown-menu li {
+  width: 100%;
+  margin: 0;
+}
+
+.nav-links .dropdown-menu a {
+  display: block;
+  padding: 0.65rem 1.25rem;
+  color: var(--text-dark, #1e293b);
+  font-size: 0.9rem;
+  font-weight: 500;
+  white-space: nowrap;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+  border-bottom: none !important;
+}
+
+.nav-links .dropdown-menu a:hover {
+  background-color: #f8fafc;
+  color: var(--accent-gold, #d98806);
+}
+
+/* CONTACT BUTTON WITH ICON */
+.nav-links .contact-btn {
+  background: var(--gold-gradient);
+  color: var(--primary-color) !important;
+  padding: 0.6rem 1.25rem;
+  border-radius: 8px;
+  font-weight: 700;
+  margin-left: 15px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 4px 12px rgba(217, 136, 6, 0.2);
+  transition: all 0.3s ease;
+}
+
+.nav-links .contact-btn i {
+  font-size: 0.85rem;
+}
+
+.nav-links .contact-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(217, 136, 6, 0.3);
+  color: var(--primary-color) !important;
+}
+
+/* HEADER RESPONSIVE */
+@media (max-width: 992px) {
+  header,
+  .header,
+  #header-placeholder {
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100px;
+    left: 0;
+    width: 100%;
+    background-color: var(--white);
+    padding: 0.5rem 0;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    z-index: 999;
+    gap: 0;
+    max-height: calc(100vh - 100px);
+    overflow-y: auto;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links li {
+    text-align: left;
+    width: 100%;
+    margin: 0;
+  }
+
+  .nav-links a {
+    display: block;
+    padding: 0.85rem 9%;
+    font-size: 1.05rem;
+    border-bottom: 1px solid #f1f5f9;
+  }
+
+  .nav-links li:last-child a {
+    border-bottom: none;
+  }
+
+  .nav-links .dropdown-menu {
+    position: static;
+    box-shadow: none;
+    border: none;
+    background-color: #f8fafc;
+    padding-left: 1rem;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    transition: max-height 0.3s ease;
+  }
+
+  .nav-links .dropdown.active .dropdown-menu {
+    max-height: 300px;
+  }
+
+  .nav-links .contact-btn {
+    margin-left: 0;
+    display: flex;
+    justify-content: center;
+    margin: 0.75rem 9%;
+  }
+}
+
+/* =========================================
+   FOOTER STYLES
+   ====================================
+===== */
+.footer-section {
+  background-color: var(--primary-color);
+  color: #cbd5e1;
+  font-size: 0.9rem;
+  padding: 4rem 0 2.5rem 0;
+  width: 100%;
+}
+
+.footer-container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: grid;
+  grid-template-columns: 1.3fr 0.8fr 1fr 1fr 1.1fr;
+  gap: 2rem;
+}
+
+.footer-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-logo-wrap {
+  margin-bottom: 1rem;
+}
+
+.footer-logo {
+  height: 90px;
+  width: auto;
+  border-radius: 50%;
+  object-fit: contain;
+}
+
+.brand-desc {
+  line-height: 1.6;
+  color: #94a3b8;
+  font-size: 0.88rem;
+}
+
+.social-links {
+  display: flex;
+  gap: 0.6rem;
+  margin-top: 1.25rem;
+}
+
+.social-links a {
+  width: 36px;
+  height: 36px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+  transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+  background: var(--accent-gold);
+  color: var(--primary-color);
+}
+
+.footer-title {
+  color: var(--white);
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin-bottom: 1.25rem;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+.footer-title::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 32px;
+  height: 3px;
+  background: var(--accent-gold);
+  border-radius: 2px;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin-bottom: 0.55rem;
+}
+
+.footer-links a {
+  color: #cbd5e1;
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  font-size: 0.88rem;
+  transition:
+    color 0.3s ease,
+    text-decoration-color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: var(--accent-gold-light, #ffc436);
+  text-decoration-color: var(--accent-gold-light, #ffc436);
+}
+
+.footer-contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  margin-bottom: 0.8rem;
+  color: #cbd5e1;
+  font-size: 0.88rem;
+}
+
+.footer-contact-item i {
+  color: var(--accent-gold);
+  font-size: 1rem;
+  margin-top: 3px;
+}
+
+/* FOOTER RESPONSIVE */
+@media (max-width: 1024px) {
+  .footer-container {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-container {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+/*This is page active css attric bute add */
+.nav-links a:hover,
+.nav-links a.active {
+  color: var(--accent-gold);
+}
+
+/*Note*/
+/* =========================================
+   PERFECT GLOBAL FOOTER STYLING
+   ========================================= */
+
+/* 1. Lock the dark background wrapper */
+#footer-placeholder,
+#footer-placeholder footer {
+  background-color: #0b192c !important; /* Rich Dark Navy */
+  color: #f8fafc;
+  display: block;
+  width: 100%;
+}
