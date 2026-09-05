@@ -32,11 +32,7 @@ body {
   background-color: var(--bg-light);
   line-height: 1.6;
 }
-@media(max-width:767px){
-   li.contact-btn-item {
-    width: fit-content!important;
-}
-}
+
 a {
   text-decoration: none;
   color: inherit;
