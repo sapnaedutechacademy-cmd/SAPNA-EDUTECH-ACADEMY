@@ -132,6 +132,7 @@ a {
 .experience-badge i {
   color: var(--accent-gold);
 }
+/* Container Wrapper */
 .about-image-card {
   position: relative;
   border-radius: 24px;
@@ -140,9 +141,10 @@ a {
   box-shadow: 0 20px 40px rgba(10, 25, 47, 0.12);
   display: block;
   width: 100%;
-  box-sizing: border-box; /* Ensures padding stays inside card width */
+  box-sizing: border-box;
 }
 
+/* Image Inner Wrapper */
 .about-image-card .img-wrapper {
   width: 100%;
   border-radius: 16px;
@@ -151,12 +153,32 @@ a {
   display: block;
 }
 
+/* Responsive Image with Fixed Ratio */
 .about-image-card img {
   width: 100%;
-  height: auto; /* Replaces fixed height to keep proportional fit */
-  aspect-ratio: 4 / 3; /* Maintains proper shape as width grows (adjust ratio if needed) */
+  height: auto;
+  aspect-ratio: 4 / 3; /* Keeps width & height growing proportionately */
   object-fit: cover;
   display: block;
+}
+
+/* Floating Badge Attachment */
+.about-image-card .floating-icon-badge {
+  position: absolute;
+  top: -16px;
+  right: -16px;
+  width: 58px;
+  height: 58px;
+  background-color: var(--white);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent-gold);
+  font-size: 1.4rem;
+  box-shadow: 0 8px 24px rgba(10, 25, 47, 0.15);
+  border: 3px solid var(--white);
+  z-index: 2;
 }
 
 .academics-section {
