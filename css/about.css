@@ -132,17 +132,6 @@ a {
 .experience-badge i {
   color: var(--accent-gold);
 }
-/* Container Wrapper */
-.about-image-card {
-  position: relative;
-  border-radius: 24px;
-  background: var(--white);
-  padding: 10px;
-  box-shadow: 0 20px 40px rgba(10, 25, 47, 0.12);
-  display: block;
-  width: 100%;
-  box-sizing: border-box;
-}
 
 .about-image-card {
   position: relative;
@@ -152,8 +141,6 @@ a {
   box-shadow: 0 20px 40px rgba(10, 25, 47, 0.12);
   display: block;
   width: 100%;
-  min-width: 320px; /* Prevents the card from becoming too narrow */
-  box-sizing: border-box;
 }
 
 .about-image-card .img-wrapper {
@@ -161,34 +148,14 @@ a {
   border-radius: 16px;
   overflow: hidden;
   line-height: 0;
-  display: block;
 }
 
 .about-image-card img {
   width: 100%;
-  height: 440px; /* Restores fixed tall height like hero section */
+  height: 440px;
   object-fit: cover;
   display: block;
 }
-
-.about-image-card .floating-icon-badge {
-  position: absolute;
-  top: -16px;
-  right: -16px;
-  width: 58px;
-  height: 58px;
-  background-color: var(--white);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--accent-gold);
-  font-size: 1.4rem;
-  box-shadow: 0 8px 24px rgba(10, 25, 47, 0.15);
-  border: 3px solid var(--white);
-  z-index: 2;
-}
-
 .academics-section {
   padding: 4rem 0 5rem;
 }
