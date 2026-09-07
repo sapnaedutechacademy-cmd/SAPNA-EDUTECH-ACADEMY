@@ -140,7 +140,9 @@ a {
   box-shadow: 0 20px 40px rgba(10, 25, 47, 0.12);
   display: block;
   width: 100%;
-  box-sizing: border-box; /* Ensures padding stays inside card width */
+  max-width: 800px; /* Increase or adjust this value to your desired maximum width */
+  margin: 0 auto;  /* Centers the card if its parent container is wider */
+  box-sizing: border-box;
 }
 
 .about-image-card .img-wrapper {
@@ -153,8 +155,7 @@ a {
 
 .about-image-card img {
   width: 100%;
-  height: auto; /* Replaces fixed height to keep proportional fit */
-  aspect-ratio: 4 / 3; /* Maintains proper shape as width grows (adjust ratio if needed) */
+  height: 500px; /* Increase height (e.g., from 440px to 500px) or use aspect-ratio: 16/9 */
   object-fit: cover;
   display: block;
 }
