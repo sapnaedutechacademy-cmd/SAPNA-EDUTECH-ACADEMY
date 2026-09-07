@@ -645,3 +645,39 @@ a {
     font-size: 1.3rem;
   }
 }
+
+
+/* =========================================
+   FLOATING BADGE ANIMATION
+   ========================================= */
+
+/* Continuous Up and Down Floating Effect */
+@keyframes floatAnimation {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px); /* Moves up 8px */
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+/* Apply animation and explicit positioning */
+.about-image-card .floating-label-badge {
+  position: absolute;
+  bottom: -25px; /* Adjust static offset as needed */
+  left: -25px;   /* Adjust static offset as needed */
+  z-index: 30;
+  animation: floatAnimation 3s ease-in-out infinite; /* Smooth floating loop */
+}
+
+/* Optional: Slight floating effect for the top-right lightning badge as well */
+.about-image-card .floating-icon-badge {
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  z-index: 30;
+  animation: floatAnimation 3.5s ease-in-out infinite continuous;
+}
