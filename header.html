@@ -1,14 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
-    <link rel="stylesheet" href="css/Components.css">
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
+
 
 <header class="header">
 
@@ -321,5 +311,1045 @@
 
 </header>
 
-</body>
-</html>
+
+<style>
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.header {
+
+    width: 100%;
+
+    margin: 0;
+
+    padding: 0;
+
+    background: #ffffff;
+
+    position: relative;
+
+    z-index: 1000;
+
+}
+
+
+/* =====================================================
+   HEADER CONTAINER
+===================================================== */
+
+.header-container {
+
+    width: 100%;
+
+    max-width: 1240px;
+
+    margin: 0 auto;
+
+    padding: 8px 20px;
+
+    box-sizing: border-box;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+}
+
+
+/* =====================================================
+   LOGO
+===================================================== */
+
+.brand-logo {
+
+    display: flex;
+
+    align-items: center;
+
+    flex-shrink: 0;
+
+    text-decoration: none;
+
+}
+
+
+.logo-image {
+
+    height: 85px;
+
+    width: auto;
+
+    object-fit: contain;
+
+    display: block;
+
+    transform: translateY(2px);
+
+    filter:
+        contrast(1.15)
+        brightness(0.95);
+
+    transition:
+        transform 0.3s ease;
+
+}
+
+
+.brand-logo:hover .logo-image {
+
+    transform:
+        translateY(2px)
+        scale(1.02);
+
+}
+
+
+/* =====================================================
+   MOBILE MENU BUTTON
+===================================================== */
+
+.menu-toggle {
+
+    display: none;
+
+    font-size: 1.4rem;
+
+    color: #0a192f;
+
+    background: #f1f5f9;
+
+    padding: 8px 12px;
+
+    border-radius: 8px;
+
+    border: 1px solid #e2e8f0;
+
+    cursor: pointer;
+
+    line-height: 1;
+
+}
+
+
+/* =====================================================
+   NAVIGATION
+===================================================== */
+
+.nav-links {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: flex-end;
+
+    gap: 1.25rem;
+
+    list-style: none;
+
+    margin: 0;
+
+    padding: 0;
+
+}
+
+
+.nav-links > li {
+
+    margin: 0;
+
+    padding: 0;
+
+}
+
+
+/* =====================================================
+   NORMAL NAVIGATION LINKS
+===================================================== */
+
+.nav-links > li > a {
+
+    text-decoration: none !important;
+
+    color: #1e293b;
+
+    font-weight: 600;
+
+    font-size: 0.92rem;
+
+    white-space: nowrap;
+
+}
+
+
+/* =====================================================
+   NAV HOVER
+===================================================== */
+
+.nav-links > li:not(.quick-connect-item) > a:hover {
+
+    color: #d97706;
+
+}
+
+
+/* =====================================================
+   DROPDOWN PARENT
+===================================================== */
+
+.dropdown {
+
+    position: relative;
+
+}
+
+
+/* =====================================================
+   DROPDOWN TOGGLE
+===================================================== */
+
+.dropdown-toggle {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 5px;
+
+}
+
+
+/* =====================================================
+   CHEVRON
+===================================================== */
+
+.dropdown-toggle i {
+
+    font-size: 0.65rem;
+
+    transition:
+        transform 0.25s ease;
+
+}
+
+
+/* =====================================================
+   DROPDOWN MENU
+===================================================== */
+
+.dropdown-menu {
+
+    position: absolute;
+
+    top: calc(100% + 12px);
+
+    left: 0;
+
+    width: 250px;
+
+    background: #ffffff;
+
+    list-style: none;
+
+    margin: 0;
+
+    padding: 8px 0;
+
+    border-radius: 10px;
+
+    border: 1px solid #e2e8f0;
+
+    box-shadow:
+        0 10px 30px rgba(10,25,47,0.15);
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transform: translateY(10px);
+
+    transition:
+        all 0.25s ease;
+
+    z-index: 2000;
+
+}
+
+
+/* =====================================================
+   SYLLABUS MENU
+===================================================== */
+
+.syllabus-menu {
+
+    width: 250px;
+
+}
+
+
+/* =====================================================
+   RIMC MENU
+===================================================== */
+
+.rimc-menu {
+
+    width: 200px;
+
+}
+
+
+/* =====================================================
+   SAINIK SCHOOL MENU
+===================================================== */
+
+.sainik-menu {
+
+    width: 260px;
+
+    left: auto;
+
+    right: 0;
+
+}
+
+
+/* =====================================================
+   DESKTOP DROPDOWN
+===================================================== */
+
+@media (min-width: 1201px) {
+
+
+    .header .dropdown:hover
+    > .dropdown-menu {
+
+        opacity: 1;
+
+        visibility: visible;
+
+        transform: translateY(0);
+
+    }
+
+
+    .header .dropdown:hover
+    > .dropdown-toggle i {
+
+        transform:
+            rotate(180deg);
+
+    }
+
+}
+
+
+/* =====================================================
+   DROPDOWN ITEMS
+===================================================== */
+
+.dropdown-menu li {
+
+    width: 100%;
+
+}
+
+
+/* =====================================================
+   DROPDOWN LINKS
+===================================================== */
+
+.dropdown-menu a {
+
+    display: block;
+
+    padding: 10px 16px;
+
+    text-decoration: none;
+
+    color: #1e293b;
+
+    font-size: 0.9rem;
+
+    font-weight: 500;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease;
+
+}
+
+
+.dropdown-menu a:hover {
+
+    background: #f8fafc;
+
+    color: #d97706;
+
+}
+
+
+/* =====================================================
+   QUICK CONNECT BUTTON
+===================================================== */
+
+.quick-connect-btn {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 7px;
+
+    text-decoration: none !important;
+
+    /* EXACT REQUESTED COLOR */
+
+    background: #00FF66;
+
+    color: #061b0d !important;
+
+    padding: 10px 16px;
+
+    border-radius: 8px;
+
+    font-weight: 700;
+
+    font-size: 0.9rem;
+
+    white-space: nowrap;
+
+    box-shadow:
+        0 4px 12px rgba(0,255,102,0.25);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+
+}
+
+
+/* =====================================================
+   QUICK CONNECT WHATSAPP ICON
+   ICON IS ON RIGHT SIDE
+===================================================== */
+
+.quick-connect-btn .whatsapp-icon {
+
+    font-size: 1.08rem;
+
+    line-height: 1;
+
+    order: 3;
+
+}
+
+
+/* =====================================================
+   QUICK CONNECT TEXT
+===================================================== */
+
+.quick-connect-text {
+
+    order: 2;
+
+}
+
+
+/* =====================================================
+   ACTIVE DOT
+===================================================== */
+
+.active-dot {
+
+    width: 8px;
+
+    height: 8px;
+
+    min-width: 8px;
+
+    border-radius: 50%;
+
+    background: #008f3c;
+
+    display: inline-block;
+
+    position: relative;
+
+    box-shadow:
+        0 0 0 2px rgba(255,255,255,0.50);
+
+    animation:
+        activePulse 1.8s infinite ease-in-out;
+
+    order: 1;
+
+}
+
+
+/* =====================================================
+   ACTIVE DOT RIPPLE
+===================================================== */
+
+.active-dot::after {
+
+    content: "";
+
+    position: absolute;
+
+    top: 50%;
+
+    left: 50%;
+
+    width: 8px;
+
+    height: 8px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(0,143,60,0.45);
+
+    transform:
+        translate(-50%, -50%);
+
+    animation:
+        activeRipple 1.8s infinite ease-out;
+
+}
+
+
+/* =====================================================
+   ACTIVE DOT PULSE
+===================================================== */
+
+@keyframes activePulse {
+
+    0% {
+
+        opacity: 1;
+
+        transform: scale(1);
+
+    }
+
+    50% {
+
+        opacity: 0.45;
+
+        transform: scale(0.82);
+
+    }
+
+    100% {
+
+        opacity: 1;
+
+        transform: scale(1);
+
+    }
+
+}
+
+
+/* =====================================================
+   ACTIVE DOT RIPPLE
+===================================================== */
+
+@keyframes activeRipple {
+
+    0% {
+
+        opacity: 0.65;
+
+        width: 8px;
+
+        height: 8px;
+
+    }
+
+    70% {
+
+        opacity: 0;
+
+        width: 18px;
+
+        height: 18px;
+
+    }
+
+    100% {
+
+        opacity: 0;
+
+        width: 18px;
+
+        height: 18px;
+
+    }
+
+}
+
+
+/* =====================================================
+   QUICK CONNECT HOVER
+===================================================== */
+
+.quick-connect-btn:hover {
+
+    transform:
+        translateY(-1px);
+
+    background: #00FF66;
+
+    box-shadow:
+        0 6px 18px rgba(0,255,102,0.40);
+
+}
+
+
+/* =====================================================
+   MOBILE / TABLET
+===================================================== */
+
+@media (max-width: 1200px) {
+
+
+    /* HEADER */
+
+    .header-container {
+
+        padding: 8px 15px;
+
+    }
+
+
+    /* MOBILE MENU BUTTON */
+
+    .menu-toggle {
+
+        display: block;
+
+    }
+
+
+    /* =================================================
+       MOBILE NAVIGATION
+    ================================================= */
+
+    .header .nav-links {
+
+        display: none;
+
+        position: absolute;
+
+        top: 100%;
+
+        left: 0;
+
+        width: 100%;
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        gap: 0;
+
+        margin: 0;
+
+        padding: 8px 0;
+
+        background: #ffffff;
+
+        border-radius:
+            0 0 12px 12px;
+
+        box-shadow:
+            0 10px 30px rgba(10,25,47,0.15);
+
+        max-height:
+            calc(100vh - 100px);
+
+        overflow-y: auto;
+
+    }
+
+
+    /* ACTIVE MOBILE MENU */
+
+    .header .nav-links.active {
+
+        display: flex;
+
+    }
+
+
+    /* ALL ITEMS */
+
+    .header .nav-links > li {
+
+        width: 100%;
+
+    }
+
+
+    /* MAIN NAVIGATION LINKS */
+
+    .header .nav-links > li > a {
+
+        display: flex;
+
+        align-items: center;
+
+        justify-content: space-between;
+
+        width: 100%;
+
+        box-sizing: border-box;
+
+        padding: 13px 18px;
+
+        border-bottom:
+            1px solid #f1f5f9;
+
+    }
+
+
+    /* =================================================
+       MOBILE DROPDOWN
+    ================================================= */
+
+    .header .dropdown-menu {
+
+        position: static;
+
+        width: 100% !important;
+
+        max-height: 0;
+
+        overflow: hidden;
+
+        opacity: 1;
+
+        visibility: visible;
+
+        transform: none;
+
+        box-shadow: none;
+
+        border: none;
+
+        border-radius: 0;
+
+        padding: 0;
+
+        transition:
+            max-height 0.3s ease;
+
+    }
+
+
+    /* ACTIVE DROPDOWN */
+
+    .header .dropdown.active
+    > .dropdown-menu {
+
+        max-height: 600px;
+
+    }
+
+
+    /* MOBILE DROPDOWN LINKS */
+
+    .header .dropdown-menu a {
+
+        padding-left: 35px;
+
+        padding-right: 18px;
+
+        background: #f8fafc;
+
+        border-bottom:
+            1px solid #eef2f7;
+
+    }
+
+
+    /* MOBILE CHEVRON */
+
+    .header .dropdown.active
+    > .dropdown-toggle i {
+
+        transform:
+            rotate(180deg);
+
+    }
+
+
+    /* =================================================
+       QUICK CONNECT MOBILE
+    ================================================= */
+
+    .header .quick-connect-btn {
+
+        margin: 10px 18px;
+
+        width:
+            calc(100% - 36px);
+
+        box-sizing: border-box;
+
+        justify-content: center;
+
+    }
+
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 600px) {
+
+
+    .header-container {
+
+        padding:
+            6px 10px;
+
+    }
+
+
+    .logo-image {
+
+        height: 70px;
+
+    }
+
+
+    .menu-toggle {
+
+        font-size: 1.3rem;
+
+        padding:
+            8px 11px;
+
+    }
+
+}
+
+
+/* =====================================================
+   EXTRA SMALL MOBILE
+===================================================== */
+
+@media (max-width: 400px) {
+
+    .logo-image {
+
+        height: 62px;
+
+    }
+
+}
+
+</style>
+
+
+
+
+
+<script>
+
+document.addEventListener(
+    "DOMContentLoaded",
+    function () {
+
+
+        /* =============================================
+           MOBILE MENU
+        ============================================== */
+
+        const menuButton =
+            document.getElementById("mobile-menu");
+
+
+        const navLinks =
+            document.getElementById("nav-links");
+
+
+        if (menuButton && navLinks) {
+
+
+            menuButton.addEventListener(
+                "click",
+                function () {
+
+                    navLinks.classList.toggle(
+                        "active"
+                    );
+
+                }
+            );
+
+        }
+
+
+        /* =============================================
+           MOBILE DROPDOWNS
+        ============================================== */
+
+        const dropdownToggles =
+            document.querySelectorAll(
+                ".header .dropdown-toggle"
+            );
+
+
+        dropdownToggles.forEach(
+            function (toggle) {
+
+
+                toggle.addEventListener(
+                    "click",
+                    function (e) {
+
+
+                        if (
+                            window.innerWidth <= 1200
+                        ) {
+
+
+                            e.preventDefault();
+
+
+                            const dropdown =
+                                this.parentElement;
+
+
+                            /* --------------------------------
+                               CLOSE OTHER DROPDOWNS
+                            -------------------------------- */
+
+                            document
+                                .querySelectorAll(
+                                    ".header .dropdown.active"
+                                )
+                                .forEach(
+                                    function (item) {
+
+
+                                        if (
+                                            item !== dropdown
+                                        ) {
+
+                                            item.classList.remove(
+                                                "active"
+                                            );
+
+                                        }
+
+                                    }
+                                );
+
+
+                            /* --------------------------------
+                               TOGGLE CURRENT DROPDOWN
+                            -------------------------------- */
+
+                            dropdown.classList.toggle(
+                                "active"
+                            );
+
+                        }
+
+                    }
+                );
+
+            }
+        );
+
+
+        /* =============================================
+           CLOSE MOBILE MENU AFTER NORMAL LINK
+        ============================================== */
+
+        document
+            .querySelectorAll(
+                ".header .nav-links a:not(.dropdown-toggle)"
+            )
+            .forEach(
+                function (link) {
+
+
+                    link.addEventListener(
+                        "click",
+                        function () {
+
+
+                            if (
+                                window.innerWidth <= 1200
+                            ) {
+
+                                navLinks.classList.remove(
+                                    "active"
+                                );
+
+                            }
+
+                        }
+                    );
+
+                }
+            );
+
+
+        /* =============================================
+           RESET ON DESKTOP
+        ============================================== */
+
+        window.addEventListener(
+            "resize",
+            function () {
+
+
+                if (
+                    window.innerWidth > 1200
+                ) {
+
+
+                    navLinks.classList.remove(
+                        "active"
+                    );
+
+
+                    document
+                        .querySelectorAll(
+                            ".header .dropdown.active"
+                        )
+                        .forEach(
+                            function (dropdown) {
+
+                                dropdown.classList.remove(
+                                    "active"
+                                );
+
+                            }
+                        );
+
+                }
+
+            }
+        );
+
+    }
+);
+
+</script>
+
+
