@@ -11,6 +11,7 @@
             <img src="upload/logo.png"
                  alt="Sapna Edutech Academy Logo"
                  class="logo-image">
+
         </a>
 
 
@@ -32,12 +33,18 @@
             id="nav-links">
 
 
-            <!-- HOME -->
+            <!-- =========================
+                 HOME
+            ========================== -->
             <li>
+
                 <a href="index.html"
                    class="active">
+
                     Home
+
                 </a>
+
             </li>
 
 
@@ -59,15 +66,24 @@
                 <ul class="dropdown-menu">
 
                     <li>
+
                         <a href="about.html">
+
                             About Us
+
                         </a>
+
                     </li>
 
+
                     <li>
+
                         <a href="flowchart.html">
+
                             Flowchart
+
                         </a>
+
                     </li>
 
                 </ul>
@@ -93,27 +109,46 @@
                 <ul class="dropdown-menu syllabus-menu">
 
                     <li>
+
                         <a href="rms-details.html">
+
                             RMS Details
+
                         </a>
+
                     </li>
 
+
                     <li>
+
                         <a href="rms-syllabus-9th.html">
+
                             RMS Syllabus 9th Class (Table)
+
                         </a>
+
                     </li>
 
+
                     <li>
+
                         <a href="rms-syllabus-9th2.html">
+
                             RMS Syllabus 9th Class
+
                         </a>
+
                     </li>
 
+
                     <li>
+
                         <a href="rms-syllabus-6th.html">
+
                             RMS Syllabus 6th Class
+
                         </a>
+
                     </li>
 
                 </ul>
@@ -122,7 +157,7 @@
 
 
             <!-- =========================
-                 RIMC
+                 RIMC DETAILS
             ========================== -->
             <li class="dropdown">
 
@@ -139,15 +174,24 @@
                 <ul class="dropdown-menu rimc-menu">
 
                     <li>
+
                         <a href="rimc.html">
+
                             RIMC
+
                         </a>
+
                     </li>
 
+
                     <li>
+
                         <a href="rimc-syllabus.html">
+
                             RIMC Syllabus
+
                         </a>
+
                     </li>
 
                 </ul>
@@ -173,27 +217,46 @@
                 <ul class="dropdown-menu sainik-menu">
 
                     <li>
+
                         <a href="sainik-intro-age.html">
+
                             Sainik School Intro & Age
+
                         </a>
+
                     </li>
 
+
                     <li>
+
                         <a href="sainik-marking-scheme.html">
+
                             Sainik Marking Scheme
+
                         </a>
+
                     </li>
 
+
                     <li>
+
                         <a href="sainik-school-syllabus.html">
+
                             Sainik School Syllabus
+
                         </a>
+
                     </li>
 
+
                     <li>
+
                         <a href="list-sainik-school.html">
+
                             List Of Sainik School
+
                         </a>
+
                     </li>
 
                 </ul>
@@ -205,14 +268,18 @@
                  JNV
             ========================== -->
             <li>
+
                 <a href="jnv-syllabus.html">
+
                     JNV Syllabus
+
                 </a>
+
             </li>
 
 
             <!-- =========================
-                 QUICK CONNECT WHATSAPP
+                 QUICK CONNECT
             ========================== -->
             <li class="quick-connect-item">
 
@@ -221,10 +288,22 @@
                    target="_blank"
                    rel="noopener noreferrer">
 
-                    <!-- Screenshot jaisa chat icon -->
+
+                    <!-- ACTIVE GREEN DOT -->
+                    <span class="active-dot"></span>
+
+
+                    <!-- QUICK CONNECT TEXT -->
+                    <span class="quick-connect-text">
+
+                        Quick Connect
+
+                    </span>
+
+
+                    <!-- CHAT ICON -->
                     <i class="fa-regular fa-comment"></i>
 
-                    <span>Quick Connect</span>
 
                 </a>
 
@@ -245,22 +324,30 @@
 ===================================================== */
 
 .header {
+
     width: 100%;
+
     margin: 0;
+
     padding: 0;
+
     background: #ffffff;
+
     position: relative;
+
     z-index: 1000;
+
 }
 
 
 /* =====================================================
-   INNER HEADER CONTAINER
+   HEADER CONTAINER
 ===================================================== */
 
 .header-container {
 
     width: 100%;
+
     max-width: 1240px;
 
     margin: 0 auto;
@@ -270,8 +357,11 @@
     box-sizing: border-box;
 
     display: flex;
+
     align-items: center;
+
     justify-content: space-between;
+
 }
 
 
@@ -282,17 +372,20 @@
 .brand-logo {
 
     display: flex;
+
     align-items: center;
 
     flex-shrink: 0;
 
     text-decoration: none;
+
 }
 
 
 .logo-image {
 
     height: 85px;
+
     width: auto;
 
     object-fit: contain;
@@ -307,13 +400,16 @@
 
     transition:
         transform 0.3s ease;
+
 }
 
 
 .brand-logo:hover .logo-image {
+
     transform:
         translateY(2px)
         scale(1.02);
+
 }
 
 
@@ -340,6 +436,7 @@
     cursor: pointer;
 
     line-height: 1;
+
 }
 
 
@@ -362,14 +459,22 @@
     margin: 0;
 
     padding: 0;
+
 }
 
 
 .nav-links > li {
+
     margin: 0;
+
     padding: 0;
+
 }
 
+
+/* =====================================================
+   NORMAL NAVIGATION LINKS
+===================================================== */
 
 .nav-links > li > a {
 
@@ -382,21 +487,23 @@
     font-size: 0.92rem;
 
     white-space: nowrap;
+
 }
 
 
 /* =====================================================
-   NORMAL NAV HOVER
+   NAV HOVER
 ===================================================== */
 
 .nav-links > li:not(.quick-connect-item) > a:hover {
 
     color: #d97706;
+
 }
 
 
 /* =====================================================
-   DROPDOWN PARENT
+   DROPDOWN
 ===================================================== */
 
 .dropdown {
@@ -421,7 +528,9 @@
 }
 
 
-/* CHEVRON */
+/* =====================================================
+   DROPDOWN CHEVRON
+===================================================== */
 
 .dropdown-toggle i {
 
@@ -434,7 +543,7 @@
 
 
 /* =====================================================
-   DESKTOP DROPDOWN
+   DROPDOWN MENU
 ===================================================== */
 
 .dropdown-menu {
@@ -476,7 +585,9 @@
 }
 
 
-/* ABOUT US DROPDOWN */
+/* =====================================================
+   ABOUT US DROPDOWN
+===================================================== */
 
 .dropdown:first-of-type .dropdown-menu {
 
@@ -485,7 +596,9 @@
 }
 
 
-/* RIMC DROPDOWN */
+/* =====================================================
+   RIMC DROPDOWN
+===================================================== */
 
 .rimc-menu {
 
@@ -494,20 +607,23 @@
 }
 
 
-/* SAINIK SCHOOL DROPDOWN */
+/* =====================================================
+   SAINIK SCHOOL DROPDOWN
+===================================================== */
 
 .sainik-menu {
 
     width: 260px;
 
     left: auto;
+
     right: 0;
 
 }
 
 
 /* =====================================================
-   DESKTOP HOVER
+   DESKTOP DROPDOWN HOVER
 ===================================================== */
 
 @media (min-width: 1201px) {
@@ -523,7 +639,8 @@
     }
 
 
-    .header .dropdown:hover > .dropdown-toggle i {
+    .header .dropdown:hover
+    > .dropdown-toggle i {
 
         transform:
             rotate(180deg);
@@ -534,7 +651,7 @@
 
 
 /* =====================================================
-   DROPDOWN ITEMS
+   DROPDOWN LINKS
 ===================================================== */
 
 .dropdown-menu li {
@@ -620,9 +737,11 @@
 }
 
 
-/* CHAT ICON */
+/* =====================================================
+   QUICK CONNECT CHAT ICON
+===================================================== */
 
-.quick-connect-btn i {
+.quick-connect-btn > i {
 
     font-size: 0.95rem;
 
@@ -631,7 +750,141 @@
 }
 
 
-/* QUICK CONNECT HOVER */
+/* =====================================================
+   ACTIVE GREEN DOT
+===================================================== */
+
+.active-dot {
+
+    width: 8px;
+
+    height: 8px;
+
+    min-width: 8px;
+
+    border-radius: 50%;
+
+    background: #22c55e;
+
+    display: inline-block;
+
+    position: relative;
+
+    box-shadow:
+        0 0 0 2px rgba(255,255,255,0.25);
+
+    animation:
+        activePulse 1.8s infinite ease-in-out;
+
+}
+
+
+/* =====================================================
+   GREEN DOT OUTER GLOW
+===================================================== */
+
+.active-dot::after {
+
+    content: "";
+
+    position: absolute;
+
+    top: 50%;
+
+    left: 50%;
+
+    width: 8px;
+
+    height: 8px;
+
+    border-radius: 50%;
+
+    background: rgba(34,197,94,0.55);
+
+    transform:
+        translate(-50%, -50%);
+
+    animation:
+        activeRipple 1.8s infinite ease-out;
+
+}
+
+
+/* =====================================================
+   DOT BLINK ANIMATION
+===================================================== */
+
+@keyframes activePulse {
+
+    0% {
+
+        opacity: 1;
+
+        transform: scale(1);
+
+    }
+
+    50% {
+
+        opacity: 0.45;
+
+        transform: scale(0.82);
+
+    }
+
+    100% {
+
+        opacity: 1;
+
+        transform: scale(1);
+
+    }
+
+}
+
+
+/* =====================================================
+   DOT GLOW ANIMATION
+===================================================== */
+
+@keyframes activeRipple {
+
+    0% {
+
+        opacity: 0.65;
+
+        width: 8px;
+
+        height: 8px;
+
+    }
+
+    70% {
+
+        opacity: 0;
+
+        width: 18px;
+
+        height: 18px;
+
+    }
+
+    100% {
+
+        opacity: 0;
+
+        width: 18px;
+
+        height: 18px;
+
+    }
+
+}
+
+
+/* =====================================================
+   QUICK CONNECT HOVER
+===================================================== */
 
 .quick-connect-btn:hover {
 
@@ -641,7 +894,7 @@
     box-shadow:
         0 6px 16px rgba(217,136,6,0.30);
 
-    opacity: 0.95;
+    opacity: 0.96;
 
 }
 
@@ -653,6 +906,8 @@
 @media (max-width: 1200px) {
 
 
+    /* HEADER */
+
     .header-container {
 
         padding: 8px 15px;
@@ -660,7 +915,7 @@
     }
 
 
-    /* MOBILE MENU ICON */
+    /* MOBILE MENU BUTTON */
 
     .menu-toggle {
 
@@ -670,7 +925,7 @@
 
 
     /* =================================================
-       MOBILE NAV
+       MOBILE NAVIGATION
     ================================================= */
 
     .header .nav-links {
@@ -720,7 +975,7 @@
     }
 
 
-    /* ALL LI */
+    /* ALL ITEMS */
 
     .header .nav-links > li {
 
@@ -729,7 +984,7 @@
     }
 
 
-    /* MAIN NAV LINKS */
+    /* MAIN LINKS */
 
     .header .nav-links > li > a {
 
@@ -787,14 +1042,15 @@
 
     /* ACTIVE DROPDOWN */
 
-    .header .dropdown.active > .dropdown-menu {
+    .header .dropdown.active
+    > .dropdown-menu {
 
         max-height: 600px;
 
     }
 
 
-    /* MOBILE DROPDOWN LINK */
+    /* MOBILE DROPDOWN LINKS */
 
     .header .dropdown-menu a {
 
@@ -874,7 +1130,7 @@
 
 
 /* =====================================================
-   EXTRA SMALL SCREEN
+   EXTRA SMALL MOBILE
 ===================================================== */
 
 @media (max-width: 400px) {
@@ -905,6 +1161,7 @@ document.addEventListener(
         const menuButton =
             document.getElementById("mobile-menu");
 
+
         const navLinks =
             document.getElementById("nav-links");
 
@@ -915,7 +1172,9 @@ document.addEventListener(
                 "click",
                 function () {
 
-                    navLinks.classList.toggle("active");
+                    navLinks.classList.toggle(
+                        "active"
+                    );
 
                 }
             );
@@ -924,7 +1183,7 @@ document.addEventListener(
 
 
         /* =============================================
-           MOBILE DROPDOWN
+           MOBILE DROPDOWNS
         ============================================== */
 
         const dropdownToggles =
@@ -944,6 +1203,7 @@ document.addEventListener(
 
                         if (window.innerWidth <= 1200) {
 
+
                             e.preventDefault();
 
 
@@ -951,7 +1211,9 @@ document.addEventListener(
                                 this.parentElement;
 
 
-                            /* Close other dropdowns */
+                            /* --------------------------------
+                               CLOSE OTHER DROPDOWNS
+                            -------------------------------- */
 
                             document
                                 .querySelectorAll(
@@ -960,7 +1222,10 @@ document.addEventListener(
                                 .forEach(
                                     function (item) {
 
-                                        if (item !== dropdown) {
+
+                                        if (
+                                            item !== dropdown
+                                        ) {
 
                                             item.classList.remove(
                                                 "active"
@@ -972,7 +1237,9 @@ document.addEventListener(
                                 );
 
 
-                            /* Open / close current */
+                            /* --------------------------------
+                               TOGGLE CURRENT DROPDOWN
+                            -------------------------------- */
 
                             dropdown.classList.toggle(
                                 "active"
@@ -988,7 +1255,7 @@ document.addEventListener(
 
 
         /* =============================================
-           CLOSE MOBILE MENU WHEN NORMAL LINK CLICKED
+           CLOSE MOBILE MENU AFTER NORMAL LINK CLICK
         ============================================== */
 
         document
@@ -998,11 +1265,15 @@ document.addEventListener(
             .forEach(
                 function (link) {
 
+
                     link.addEventListener(
                         "click",
                         function () {
 
-                            if (window.innerWidth <= 1200) {
+
+                            if (
+                                window.innerWidth <= 1200
+                            ) {
 
                                 navLinks.classList.remove(
                                     "active"
@@ -1025,7 +1296,9 @@ document.addEventListener(
             "resize",
             function () {
 
+
                 if (window.innerWidth > 1200) {
+
 
                     navLinks.classList.remove(
                         "active"
@@ -1038,6 +1311,7 @@ document.addEventListener(
                         )
                         .forEach(
                             function (dropdown) {
+
 
                                 dropdown.classList.remove(
                                     "active"
