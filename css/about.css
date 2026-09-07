@@ -155,7 +155,7 @@ a {
 
 .about-image-card img {
   width: 100%;
-  height: 500px; /* Increase height (e.g., from 440px to 500px) or use aspect-ratio: 16/9 */
+  height: 550px; /* Increase height (e.g., from 440px to 500px) or use aspect-ratio: 16/9 */
   object-fit: cover;
   display: block;
 }
