@@ -140,7 +140,7 @@ a {
   box-shadow: 0 20px 40px rgba(10, 25, 47, 0.12);
   display: block;
   width: 100%;
-
+  box-sizing: border-box; /* Ensures padding stays inside card width */
 }
 
 .about-image-card .img-wrapper {
@@ -148,14 +148,15 @@ a {
   border-radius: 16px;
   overflow: hidden;
   line-height: 0;
-
+  display: block;
 }
+
 .about-image-card img {
   width: 100%;
-  height: 440px;
+  height: auto; /* Replaces fixed height to keep proportional fit */
+  aspect-ratio: 4 / 3; /* Maintains proper shape as width grows (adjust ratio if needed) */
   object-fit: cover;
   display: block;
-
 }
 
 .academics-section {
