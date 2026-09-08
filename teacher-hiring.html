@@ -1,1 +1,772 @@
 
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Teacher Hiring | Sapna Edutech Academy</title>
+    <meta name="description"
+        content="Join Sapna Edutech Academy as a teacher. Explore teaching opportunities and connect directly with the academy team on WhatsApp.">
+
+    <link rel="icon" type="image/png" href="upload/logo2.png">
+
+    <!-- EXACT SAME CSS FILES AS INDEX PAGE -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link rel="stylesheet" href="css/Components.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        /*
+         * IMPORTANT:
+         * Typography is NOT recreated here.
+         * This page deliberately reuses the same classes from index.html:
+         * .section-header
+         * .eyebrow-tag
+         * .section-title
+         * .section-subtitle
+         * .hero-title
+         * .hero-description
+         * .gg-card
+         * .gg-icon-wrapper
+         *
+         * Therefore font-size / font-family / font-weight remain controlled
+         * by the same CSS used by the Home Page.
+         */
+
+        .teacher-page {
+            width: 100%;
+        }
+
+        .teacher-wrap {
+            width: min(1080px, calc(100% - 40px));
+            margin: 0 auto;
+        }
+
+        /* =========================
+           SHORT CAREERS HERO
+        ========================= */
+        .teacher-hero {
+            position: relative;
+            padding: 68px 0 72px;
+            background: #f3f7fa;
+            overflow: hidden;
+        }
+
+        .teacher-hero::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            opacity: .45;
+            background-image:
+                linear-gradient(rgba(6, 39, 70, .045) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(6, 39, 70, .045) 1px, transparent 1px);
+            background-size: 32px 32px;
+            pointer-events: none;
+        }
+
+        .teacher-hero::after {
+            content: "";
+            position: absolute;
+            width: 330px;
+            height: 330px;
+            right: -170px;
+            top: -170px;
+            border-radius: 50%;
+            border: 55px solid rgba(255, 196, 54, .12);
+        }
+
+        .teacher-hero-grid {
+            position: relative;
+            z-index: 1;
+            display: grid;
+            grid-template-columns: 1.2fr .8fr;
+            gap: 45px;
+            align-items: center;
+        }
+
+        .teacher-hero .hero-title {
+            margin-bottom: 0;
+        }
+
+        .teacher-hero .hero-description {
+            max-width: 640px;
+            margin-top: 15px;
+        }
+
+        .teacher-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 22px;
+        }
+
+        .teacher-wa-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 11px 17px;
+            border-radius: 8px;
+            background: #00ff66;
+            color: #061d18;
+            text-decoration: none;
+            font-size: inherit;
+            font-weight: 600;
+            transition: .25s ease;
+        }
+
+        .teacher-wa-btn:hover {
+            transform: translateY(-2px);
+        }
+
+        .teacher-outline-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 17px;
+            border: 1px solid var(--primary-color, #062746);
+            border-radius: 8px;
+            color: var(--primary-color, #062746);
+            text-decoration: none;
+            font-size: inherit;
+            font-weight: 600;
+            transition: .25s ease;
+        }
+
+        .teacher-outline-btn:hover {
+            color: #fff;
+            background: var(--primary-color, #062746);
+        }
+
+        .teacher-hero-card {
+            padding: 28px;
+            border-radius: 20px;
+            color: #fff;
+            background: linear-gradient(135deg, var(--primary-color, #062746) 0%, #092c3e 100%);
+            box-shadow: 0 15px 35px rgba(10, 25, 47, .16);
+        }
+
+        .teacher-hero-card .teacher-card-icon {
+            width: 43px;
+            height: 43px;
+            display: grid;
+            place-items: center;
+            margin-bottom: 15px;
+            border-radius: 10px;
+            color: var(--primary-color, #062746);
+            background: #ffc436;
+        }
+
+        .teacher-hero-card h3 {
+            margin: 0 0 8px;
+        }
+
+        .teacher-hero-card p {
+            margin: 0;
+            opacity: .72;
+            line-height: 1.7;
+        }
+
+        .teacher-hero-card .teacher-card-small {
+            display: block;
+            margin-top: 16px;
+            color: #ffc436;
+            font-weight: 700;
+        }
+
+        /* =========================
+           SECTIONS
+        ========================= */
+        .teacher-section {
+            padding: 65px 0;
+        }
+
+        .teacher-section.soft {
+            background: #eef4f8;
+        }
+
+        /*
+         * .section-header / .section-title / .section-subtitle
+         * are intentionally the SAME classes as index.html.
+         */
+        .teacher-section-header {
+            margin-bottom: 30px;
+        }
+
+        .teacher-section-header.center {
+            text-align: center;
+        }
+
+        /* =========================
+           OPEN POSITIONS
+        ========================= */
+        .teacher-jobs {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 14px;
+        }
+
+        /* Reuse Home's gg-card styling */
+        .teacher-job-card {
+            min-height: 100%;
+        }
+
+        .teacher-job-card .gg-icon-wrapper {
+            margin-bottom: 13px;
+        }
+
+        .teacher-job-tag {
+            display: inline-block;
+            margin-top: 12px;
+            padding: 5px 8px;
+            border-radius: 5px;
+            background: #fff4d7;
+            color: #8a5600;
+            font-size: 9px;
+            font-weight: 700;
+        }
+
+        /* =========================
+           WHAT WE LOOK FOR
+        ========================= */
+        .teacher-looking {
+            display: grid;
+            grid-template-columns: .8fr 1.2fr;
+            gap: 25px;
+            align-items: stretch;
+        }
+
+        .teacher-looking-intro {
+            padding: 28px;
+            border-radius: 18px;
+            color: #fff;
+            background: linear-gradient(135deg, var(--primary-color, #062746) 0%, #092c3e 100%);
+            box-shadow: 0 12px 30px rgba(10, 25, 47, .12);
+        }
+
+        .teacher-looking-intro i {
+            margin-bottom: 15px;
+            color: #ffc436;
+            font-size: 20px;
+        }
+
+        .teacher-looking-intro h3 {
+            margin: 0 0 9px;
+        }
+
+        .teacher-looking-intro p {
+            margin: 0;
+            opacity: .72;
+            line-height: 1.7;
+        }
+
+        .teacher-checks {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 11px;
+        }
+
+        .teacher-check {
+            display: flex;
+            gap: 9px;
+            padding: 15px;
+            border: 1px solid #dce5ec;
+            border-radius: 11px;
+            background: #fff;
+        }
+
+        .teacher-check i {
+            flex: 0 0 auto;
+            color: #d98806;
+            margin-top: 2px;
+        }
+
+        .teacher-check strong {
+            display: block;
+            margin-bottom: 3px;
+        }
+
+        .teacher-check span {
+            display: block;
+            color: #64748b;
+            line-height: 1.55;
+        }
+
+        /* =========================
+           SIMPLE PROCESS
+        ========================= */
+        .teacher-process {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 12px;
+            position: relative;
+        }
+
+        .teacher-step {
+            position: relative;
+            text-align: center;
+            padding: 0 10px;
+        }
+
+        .teacher-step-number {
+            width: 40px;
+            height: 40px;
+            display: grid;
+            place-items: center;
+            margin: 0 auto 13px;
+            border-radius: 50%;
+            background: var(--primary-color, #062746);
+            color: #fff;
+            font-weight: 700;
+        }
+
+        .teacher-step h4 {
+            margin: 0 0 6px;
+        }
+
+        .teacher-step p {
+            margin: 0;
+            color: #64748b;
+            line-height: 1.55;
+        }
+
+        /* =========================
+           WHATSAPP CTA
+        ========================= */
+        .teacher-apply {
+            padding: 60px 0;
+            background: #eef4f8;
+        }
+
+        .teacher-apply-card {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 30px;
+            padding: 38px 42px;
+            border-radius: 20px;
+            color: #fff;
+            background: linear-gradient(135deg, var(--primary-color, #062746) 0%, #092c3e 100%);
+            box-shadow: 0 15px 35px rgba(10, 25, 47, .18);
+        }
+
+        .teacher-apply-content {
+            max-width: 680px;
+        }
+
+        .teacher-apply-label {
+            display: block;
+            margin-bottom: 7px;
+            color: #ffc436;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .teacher-apply-content h2 {
+            margin: 0 0 9px;
+        }
+
+        .teacher-apply-content p {
+            margin: 0;
+            opacity: .72;
+            line-height: 1.7;
+        }
+
+        .teacher-apply-action {
+            flex: 0 0 auto;
+            text-align: center;
+        }
+
+        .teacher-phone {
+            display: block;
+            margin-bottom: 9px;
+            color: #fff;
+            text-decoration: none;
+            font-weight: 700;
+        }
+
+        .teacher-phone:hover {
+            color: #ffc436;
+        }
+
+        .teacher-apply-action .teacher-wa-btn {
+            justify-content: center;
+            min-width: 195px;
+        }
+
+        .teacher-note {
+            display: block;
+            margin-top: 6px;
+            opacity: .45;
+        }
+
+        @media (max-width: 900px) {
+            .teacher-hero-grid,
+            .teacher-looking {
+                grid-template-columns: 1fr;
+            }
+
+            .teacher-jobs {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .teacher-apply-card {
+                display: grid;
+                grid-template-columns: 1fr;
+            }
+
+            .teacher-apply-action {
+                text-align: left;
+            }
+        }
+
+        @media (max-width: 700px) {
+            .teacher-wrap {
+                width: min(100% - 28px, 1080px);
+            }
+
+            .teacher-hero,
+            .teacher-section,
+            .teacher-apply {
+                padding-top: 52px;
+                padding-bottom: 52px;
+            }
+
+            .teacher-jobs,
+            .teacher-checks {
+                grid-template-columns: 1fr;
+            }
+
+            .teacher-process {
+                grid-template-columns: 1fr 1fr;
+                gap: 26px 4px;
+            }
+
+            .teacher-apply-card {
+                padding: 29px 22px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="header-placeholder"></div>
+
+    <main class="teacher-page">
+
+        <!-- =====================================================
+             1. HERO
+             Uses Home Page's hero-title + hero-description typography.
+        ====================================================== -->
+        <section class="teacher-hero">
+            <div class="teacher-wrap teacher-hero-grid">
+
+                <div>
+                    <div class="eyebrow-tag">
+                        <span class="eyebrow-bar"></span>
+                        <span class="eyebrow-text">CAREERS AT SAPNA EDUTECH</span>
+                    </div>
+
+                    <h1 class="hero-title">
+                        Teach With Purpose.<br>
+                        <span>Grow With Us.</span>
+                    </h1>
+
+                    <p class="hero-description">
+                        Sapna Edutech Academy is looking for passionate educators who believe
+                        in strong concepts, personal attention, disciplined learning, and
+                        helping students achieve their academic goals.
+                    </p>
+
+                    <div class="teacher-actions">
+                        <a class="teacher-wa-btn"
+                           href="https://wa.me/918699776836?text=Hello%20Sapna%20Edutech%20Academy!%20%F0%9F%91%8B%0AI%20am%20interested%20in%20a%20teacher%20position.%20Please%20share%20the%20current%20vacancies%20and%20details.%20Thank%20you!"
+                           target="_blank" rel="noopener">
+                            <i class="fa-brands fa-whatsapp"></i>
+                            I'm Interested
+                        </a>
+
+                        <a class="teacher-outline-btn" href="#positions">
+                            View Positions
+                            <i class="fa-solid fa-arrow-down"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="teacher-hero-card">
+                    <div class="teacher-card-icon">
+                        <i class="fa-solid fa-chalkboard-user"></i>
+                    </div>
+
+                    <h3>Teach. Guide. Inspire.</h3>
+
+                    <p>
+                        We value educators who can make learning simple, engaging, and
+                        meaningful — not just complete chapters.
+                    </p>
+
+                    <span class="teacher-card-small">
+                        Student-first teaching culture
+                    </span>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- =====================================================
+             2. OPEN POSITIONS
+             Uses Home Page's gg-card + gg-icon-wrapper classes.
+        ====================================================== -->
+        <section class="teacher-section" id="positions">
+            <div class="teacher-wrap">
+
+                <div class="section-header teacher-section-header">
+                    <div class="eyebrow-tag">
+                        <span class="eyebrow-bar"></span>
+                        <span class="eyebrow-text">TEACHING OPPORTUNITIES</span>
+                    </div>
+
+                    <h2 class="section-title">
+                        Where Your Expertise Can Make a Difference
+                    </h2>
+
+                    <p class="section-subtitle">
+                        Teaching requirements may vary according to batches and academic
+                        needs. Contact us on WhatsApp for current openings.
+                    </p>
+                </div>
+
+                <div class="teacher-jobs">
+
+                    <div class="gg-card teacher-job-card">
+                        <div class="gg-icon-wrapper">
+                            <i class="fa-solid fa-calculator"></i>
+                        </div>
+
+                        <h4>Mathematics Faculty</h4>
+
+                        <p>
+                            School and foundation-level teaching focused on clear concepts,
+                            strong fundamentals, and exam-oriented practice.
+                        </p>
+
+                        <span class="teacher-job-tag">School & Foundation</span>
+                    </div>
+
+                    <div class="gg-card teacher-job-card">
+                        <div class="gg-icon-wrapper">
+                            <i class="fa-solid fa-laptop-code"></i>
+                        </div>
+
+                        <h4>Computer / IT Faculty</h4>
+
+                        <p>
+                            Practical computer education and programming instruction with
+                            emphasis on hands-on learning and application.
+                        </p>
+
+                        <span class="teacher-job-tag">Computer & IT</span>
+                    </div>
+
+                    <div class="gg-card teacher-job-card">
+                        <div class="gg-icon-wrapper">
+                            <i class="fa-solid fa-trophy"></i>
+                        </div>
+
+                        <h4>Competitive Exam Faculty</h4>
+
+                        <p>
+                            Structured preparation, practice, mock tests, and guidance for
+                            school-level entrance and competitive examinations.
+                        </p>
+
+                        <span class="teacher-job-tag">Competitive Preparation</span>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- =====================================================
+             3. WHAT WE LOOK FOR
+        ====================================================== -->
+        <section class="teacher-section soft">
+            <div class="teacher-wrap teacher-looking">
+
+                <div class="teacher-looking-intro">
+                    <i class="fa-solid fa-star"></i>
+
+                    <h3>What Makes a Great Fit?</h3>
+
+                    <p>
+                        We are looking for educators who combine subject expertise with
+                        patience, communication, consistency, and a genuine interest in
+                        student progress.
+                    </p>
+                </div>
+
+                <div class="teacher-checks">
+
+                    <div class="teacher-check">
+                        <i class="fa-solid fa-circle-check"></i>
+                        <div>
+                            <strong>Strong Subject Knowledge</strong>
+                            <span>Clear understanding of the subject and fundamentals.</span>
+                        </div>
+                    </div>
+
+                    <div class="teacher-check">
+                        <i class="fa-solid fa-circle-check"></i>
+                        <div>
+                            <strong>Clear Communication</strong>
+                            <span>Ability to explain difficult topics simply.</span>
+                        </div>
+                    </div>
+
+                    <div class="teacher-check">
+                        <i class="fa-solid fa-circle-check"></i>
+                        <div>
+                            <strong>Student-First Mindset</strong>
+                            <span>Patience and willingness to support different learners.</span>
+                        </div>
+                    </div>
+
+                    <div class="teacher-check">
+                        <i class="fa-solid fa-circle-check"></i>
+                        <div>
+                            <strong>Professional Approach</strong>
+                            <span>Punctuality, discipline, preparation, and responsibility.</span>
+                        </div>
+                    </div>
+
+                    <div class="teacher-check">
+                        <i class="fa-solid fa-circle-check"></i>
+                        <div>
+                            <strong>Assessment & Feedback</strong>
+                            <span>Comfort with tests, practice, feedback, and progress tracking.</span>
+                        </div>
+                    </div>
+
+                    <div class="teacher-check">
+                        <i class="fa-solid fa-circle-check"></i>
+                        <div>
+                            <strong>Teaching Experience</strong>
+                            <span>Prior teaching or tutoring experience is valuable.</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- =====================================================
+             4. SIMPLE HIRING PROCESS
+        ====================================================== -->
+        <section class="teacher-section">
+            <div class="teacher-wrap">
+
+                <div class="section-header teacher-section-header center">
+                    <div class="eyebrow-tag">
+                        <span class="eyebrow-bar"></span>
+                        <span class="eyebrow-text">SIMPLE HIRING PROCESS</span>
+                    </div>
+
+                    <h2 class="section-title">
+                        No Form. Just a Direct Conversation.
+                    </h2>
+
+                    <p class="section-subtitle">
+                        Start with WhatsApp and our team will guide you through the next steps.
+                    </p>
+                </div>
+
+                <div class="teacher-process">
+
+                    <div class="teacher-step">
+                        <div class="teacher-step-number">01</div>
+                        <h4>Message Us</h4>
+                        <p>Connect directly with the academy on WhatsApp.</p>
+                    </div>
+
+                    <div class="teacher-step">
+                        <div class="teacher-step-number">02</div>
+                        <h4>Share Your Profile</h4>
+                        <p>Tell us your subject, qualification, and experience.</p>
+                    </div>
+
+                    <div class="teacher-step">
+                        <div class="teacher-step-number">03</div>
+                        <h4>Discuss Opportunity</h4>
+                        <p>Discuss suitable teaching requirements with our team.</p>
+                    </div>
+
+                    <div class="teacher-step">
+                        <div class="teacher-step-number">04</div>
+                        <h4>Next Selection Step</h4>
+                        <p>If suitable, we guide you about the selection process.</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- =====================================================
+             5. FINAL WHATSAPP CTA
+        ====================================================== -->
+        <section class="teacher-apply">
+            <div class="teacher-wrap">
+
+                <div class="teacher-apply-card">
+
+                    <div class="teacher-apply-content">
+                        <span class="teacher-apply-label">
+                            FACULTY RECRUITMENT
+                        </span>
+
+                        <h2>
+                            Ready to Join the Sapna Edutech Team?
+                        </h2>
+
+                        <p>
+                            No lengthy application form. Send us a WhatsApp message with
+                            your subject, qualification, experience, and preferred teaching
+                            role. Our team will guide you about current openings.
+                        </p>
+                    </div>
+
+                    <div class="teacher-apply-action">
+
+                        <!-- CORRECT ACADEMY CALL NUMBER -->
+                        <a href="tel:+917508298749" class="teacher-phone">
+                            +91 75082 98749
+                        </a>
+
+                        <!-- WHATSAPP -->
+                        <a class="teacher-wa-btn"
+                           href="https://wa.me/918699776836?text=Hello%20Sapna%20Edutech%20Academy!%20%F0%9F%91%8B%0A%0AI%20am%20interested%20in%20joining%20your%20teaching%20team.%0A%0ASubject%3A%20%0AQualification%3A%20%0ATeaching%20Experience%3A%20%0APreferred%20Role%3A%20%0A%0APlease%20share%20the%20current%20vacancies%20and%20next%20steps.%20Thank%20you!"
+                           target="_blank" rel="noopener">
+                            <i class="fa-brands fa-whatsapp"></i>
+                            Send Teacher Enquiry
+                        </a>
+
+                        <span class="teacher-note">
+                            Direct WhatsApp • No online form
+                        </span>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="components.js"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>
