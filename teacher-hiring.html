@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -139,40 +138,47 @@
             background: var(--primary-color, #062746);
         }
 
-        .teacher-hero-card {
-            padding: 28px;
+        .teacher-hero-image-placeholder {
+            min-height: 365px;
+            border: 2px dashed rgba(6, 39, 70, .25);
             border-radius: 20px;
-            color: #fff;
-            background: linear-gradient(135deg, var(--primary-color, #062746) 0%, #092c3e 100%);
-            box-shadow: 0 15px 35px rgba(10, 25, 47, .16);
+            background:
+                linear-gradient(135deg, rgba(6, 39, 70, .045), rgba(255, 196, 54, .08));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 15px 35px rgba(10, 25, 47, .10);
+            overflow: hidden;
         }
 
-        .teacher-hero-card .teacher-card-icon {
-            width: 43px;
-            height: 43px;
-            display: grid;
-            place-items: center;
-            margin-bottom: 15px;
-            border-radius: 10px;
+        .teacher-placeholder-content {
+            width: 180px;
+            height: 180px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 7px;
+            border-radius: 18px;
             color: var(--primary-color, #062746);
-            background: #ffc436;
+            background: rgba(255, 255, 255, .75);
+            text-align: center;
         }
 
-        .teacher-hero-card h3 {
-            margin: 0 0 8px;
+        .teacher-placeholder-content i {
+            margin-bottom: 4px;
+            color: #d98806;
+            font-size: 38px;
         }
 
-        .teacher-hero-card p {
-            margin: 0;
-            opacity: .72;
-            line-height: 1.7;
-        }
-
-        .teacher-hero-card .teacher-card-small {
-            display: block;
-            margin-top: 16px;
-            color: #ffc436;
+        .teacher-placeholder-content span {
+            font-size: 12px;
             font-weight: 700;
+        }
+
+        .teacher-placeholder-content small {
+            color: #64748b;
+            font-size: 9px;
         }
 
         /* =========================
@@ -439,6 +445,10 @@
                 grid-template-columns: 1fr;
             }
 
+            .teacher-hero-image-placeholder {
+                min-height: 300px;
+            }
+
             .teacher-process {
                 grid-template-columns: 1fr 1fr;
                 gap: 26px 4px;
@@ -496,21 +506,17 @@
                     </div>
                 </div>
 
-                <div class="teacher-hero-card">
-                    <div class="teacher-card-icon">
-                        <i class="fa-solid fa-chalkboard-user"></i>
+                <!-- IMAGE PLACEHOLDER
+                     Replace this entire div with your image later.
+                     Example:
+                     <img src="upload/teacher-hiring.jpg" alt="Sapna Edutech Academy Faculty">
+                -->
+                <div class="teacher-hero-image-placeholder">
+                    <div class="teacher-placeholder-content">
+                        <i class="fa-regular fa-image"></i>
+                        <span>Teacher / Faculty Image</span>
+                        <small>Image Placeholder</small>
                     </div>
-
-                    <h3>Teach. Guide. Inspire.</h3>
-
-                    <p>
-                        We value educators who can make learning simple, engaging, and
-                        meaningful — not just complete chapters.
-                    </p>
-
-                    <span class="teacher-card-small">
-                        Student-first teaching culture
-                    </span>
                 </div>
 
             </div>
