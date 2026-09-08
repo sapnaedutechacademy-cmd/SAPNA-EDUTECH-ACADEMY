@@ -16,19 +16,17 @@
 <style>
 img.contact-gif {
     border-radius: 38px;
-   
     width: 70%;
 } 
-    
-    .cta-compact-action {
+
+.cta-compact-action {
     background: linear-gradient(135deg, #d98806 0%, #ffc436 100%);
 }
 @media(max-width:767px){ .cta-compact-cards {
     display: block!important;
-    
 } }
-    
-   .cta-compact-action {
+
+.cta-compact-action {
     font-weight: 600;
     color: black;
     width: 183px;
@@ -36,14 +34,16 @@ img.contact-gif {
     padding: 11px;
     border-radius: 12px!important;
 }
-   .contact-grid {
+
+.contact-grid {
     display: grid;
     grid-template-columns: 1.25fr 0.75fr!important;
     gap: 2rem;
     margin-top: 2.5rem;
     align-items: start;
-} .cta-compact-cards {
-       color:white;
+}
+.cta-compact-cards {
+    color:white;
     width: 100%;
     max-width: 850px;
     background: linear-gradient(135deg, var(--primary-color) 0%, #092c3e 100%);
@@ -57,6 +57,151 @@ img.contact-gif {
     box-shadow: 0 15px 35px rgba(10, 25, 47, 0.18);
     position: relative;
     overflow: hidden;
+}
+
+/* HERO FADE SLIDER - isolated to the hero image */
+.hero-image-wrapper {
+    position: relative;
+}
+
+.hero-image-slider {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    min-height: 420px;
+    overflow: hidden;
+    border-radius: inherit;
+}
+
+.hero-image-slide {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 0;
+    transition: opacity 0.9s ease-in-out, visibility 0s linear 0.9s;
+    will-change: opacity;
+}
+
+.hero-image-slide.is-active {
+    opacity: 1;
+    visibility: visible;
+    z-index: 1;
+    transition: opacity 0.9s ease-in-out;
+}
+
+.hero-slider-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 5;
+    width: 42px;
+    height: 42px;
+    border: 0;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.38);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.15);
+    transition: background .25s ease, transform .25s ease, opacity .25s ease;
+}
+
+.hero-slider-arrow:hover {
+    background: rgba(0, 0, 0, 0.62);
+}
+
+.hero-slider-arrow:active {
+    transform: translateY(-50%) scale(.94);
+}
+
+.hero-slider-prev {
+    left: 14px;
+}
+
+.hero-slider-next {
+    right: 14px;
+}
+
+.hero-slider-dots {
+    position: absolute;
+    left: 50%;
+    bottom: 16px;
+    transform: translateX(-50%);
+    z-index: 5;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    padding: 7px 10px;
+    border-radius: 999px;
+    background: rgba(0, 0, 0, 0.28);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+}
+
+.hero-slider-dot {
+    width: 8px;
+    height: 8px;
+    padding: 0;
+    border: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.58);
+    cursor: pointer;
+    transition: width .25s ease, background .25s ease, transform .25s ease;
+}
+
+.hero-slider-dot:hover {
+    transform: scale(1.15);
+}
+
+.hero-slider-dot.is-active {
+    width: 22px;
+    border-radius: 999px;
+    background: #fff;
+}
+
+.hero-slider-arrow:focus-visible,
+.hero-slider-dot:focus-visible {
+    outline: 2px solid #fff;
+    outline-offset: 3px;
+}
+
+@media (max-width: 767px) {
+    .hero-image-slider {
+        min-height: 300px;
+    }
+
+    .hero-slider-arrow {
+        width: 36px;
+        height: 36px;
+    }
+
+    .hero-slider-prev {
+        left: 9px;
+    }
+
+    .hero-slider-next {
+        right: 9px;
+    }
+
+    .hero-slider-dots {
+        bottom: 10px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .hero-image-slide,
+    .hero-slider-arrow,
+    .hero-slider-dot {
+        transition: none !important;
+    }
 }
 </style>
 
@@ -119,7 +264,40 @@ img.contact-gif {
 
             <div class="hero-image-wrapper">
                 <div class="image-card">
-                    <img src="upload/hero-img.jpeg" alt="Sapna Academy Coaching Classroom">
+                    <div class="hero-image-slider" id="heroImageSlider" aria-label="Sapna Academy highlights">
+                        <!--
+                            HERO SLIDES:
+                            Replace the src values below with your new images.
+                            Keep the same structure/classes for a smooth fade slider.
+                        -->
+                        <img class="hero-image-slide is-active"
+                             src="upload/hero-img.jpeg"
+                             alt="Sapna Academy Coaching Classroom">
+                        <img class="hero-image-slide"
+                             src="upload/hero-img.jpeg"
+                             alt="Sapna Academy Coaching Classroom">
+                        <img class="hero-image-slide"
+                             src="upload/hero-img.jpeg"
+                             alt="Sapna Academy Coaching Classroom">
+                        <img class="hero-image-slide"
+                             src="upload/hero-img.jpeg"
+                             alt="Sapna Academy Coaching Classroom">
+
+                        <button type="button"
+                                class="hero-slider-arrow hero-slider-prev"
+                                aria-label="Previous slide">
+                            <i class="fa-solid fa-chevron-left"></i>
+                        </button>
+
+                        <button type="button"
+                                class="hero-slider-arrow hero-slider-next"
+                                aria-label="Next slide">
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </button>
+
+                        <div class="hero-slider-dots" aria-label="Choose slide"></div>
+                    </div>
+
                     <div class="floating-icon-badge">
                         <i class="fa-solid fa-bolt"></i>
                     </div>
@@ -557,6 +735,172 @@ img.contact-gif {
 
     <script src="components.js"></script>
     <script src="script.js"></script>
+
+    <!-- HERO FADE SLIDER -->
+    <script>
+        (function () {
+            'use strict';
+
+            function initHeroSlider() {
+                const slider = document.getElementById('heroImageSlider');
+                if (!slider) return;
+
+                const slides = Array.from(
+                    slider.querySelectorAll('.hero-image-slide')
+                );
+                const dotsContainer = slider.querySelector('.hero-slider-dots');
+                const prevButton = slider.querySelector('.hero-slider-prev');
+                const nextButton = slider.querySelector('.hero-slider-next');
+
+                if (slides.length <= 1) {
+                    if (prevButton) prevButton.style.display = 'none';
+                    if (nextButton) nextButton.style.display = 'none';
+                    if (dotsContainer) dotsContainer.style.display = 'none';
+                    return;
+                }
+
+                let currentIndex = 0;
+                let autoPlayTimer = null;
+                let isPaused = false;
+                const AUTO_PLAY_DELAY = 5000;
+
+                // Create navigation dots dynamically so they always match the number of slides.
+                slides.forEach(function (_, index) {
+                    const dot = document.createElement('button');
+                    dot.type = 'button';
+                    dot.className = 'hero-slider-dot' + (index === 0 ? ' is-active' : '');
+                    dot.setAttribute('aria-label', 'Go to slide ' + (index + 1));
+                    dot.setAttribute('aria-current', index === 0 ? 'true' : 'false');
+
+                    dot.addEventListener('click', function () {
+                        goToSlide(index);
+                        restartAutoPlay();
+                    });
+
+                    dotsContainer.appendChild(dot);
+                });
+
+                const dots = Array.from(
+                    dotsContainer.querySelectorAll('.hero-slider-dot')
+                );
+
+                function updateSlider(newIndex) {
+                    currentIndex = (newIndex + slides.length) % slides.length;
+
+                    slides.forEach(function (slide, index) {
+                        slide.classList.toggle('is-active', index === currentIndex);
+                    });
+
+                    dots.forEach(function (dot, index) {
+                        const active = index === currentIndex;
+                        dot.classList.toggle('is-active', active);
+                        dot.setAttribute('aria-current', active ? 'true' : 'false');
+                    });
+                }
+
+                function goToSlide(index) {
+                    if (index === currentIndex) return;
+                    updateSlider(index);
+                }
+
+                function nextSlide() {
+                    updateSlider(currentIndex + 1);
+                }
+
+                function previousSlide() {
+                    updateSlider(currentIndex - 1);
+                }
+
+                function stopAutoPlay() {
+                    if (autoPlayTimer) {
+                        clearInterval(autoPlayTimer);
+                        autoPlayTimer = null;
+                    }
+                }
+
+                function startAutoPlay() {
+                    stopAutoPlay();
+
+                    if (isPaused) return;
+
+                    autoPlayTimer = setInterval(function () {
+                        nextSlide();
+                    }, AUTO_PLAY_DELAY);
+                }
+
+                function restartAutoPlay() {
+                    startAutoPlay();
+                }
+
+                if (nextButton) {
+                    nextButton.addEventListener('click', function () {
+                        nextSlide();
+                        restartAutoPlay();
+                    });
+                }
+
+                if (prevButton) {
+                    prevButton.addEventListener('click', function () {
+                        previousSlide();
+                        restartAutoPlay();
+                    });
+                }
+
+                // Pause while the user is interacting with the slider.
+                slider.addEventListener('mouseenter', function () {
+                    isPaused = true;
+                    stopAutoPlay();
+                });
+
+                slider.addEventListener('mouseleave', function () {
+                    isPaused = false;
+                    startAutoPlay();
+                });
+
+                slider.addEventListener('focusin', function () {
+                    isPaused = true;
+                    stopAutoPlay();
+                });
+
+                slider.addEventListener('focusout', function () {
+                    // Resume only after focus has completely left the slider.
+                    setTimeout(function () {
+                        if (!slider.contains(document.activeElement)) {
+                            isPaused = false;
+                            startAutoPlay();
+                        }
+                    }, 0);
+                });
+
+                // Keyboard navigation when the slider is focused.
+                slider.addEventListener('keydown', function (event) {
+                    if (event.key === 'ArrowLeft') {
+                        event.preventDefault();
+                        previousSlide();
+                        restartAutoPlay();
+                    } else if (event.key === 'ArrowRight') {
+                        event.preventDefault();
+                        nextSlide();
+                        restartAutoPlay();
+                    }
+                });
+
+                // Respect users who prefer reduced motion.
+                if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                    isPaused = true;
+                    stopAutoPlay();
+                } else {
+                    startAutoPlay();
+                }
+            }
+
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', initHeroSlider);
+            } else {
+                initHeroSlider();
+            }
+        })();
+    </script>
 </body>
 
 </html>
