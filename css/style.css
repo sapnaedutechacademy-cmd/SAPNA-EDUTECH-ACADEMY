@@ -206,7 +206,7 @@ a {
 
 .hero-image-wrapper {
   position: relative;
-  display: flex;
+  /* display: flex; */
   justify-content: center;
 }
 
