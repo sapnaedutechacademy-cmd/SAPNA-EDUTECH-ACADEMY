@@ -419,8 +419,7 @@ header,
   width: 100%;
 }
 
-
-/* target links inside footer or header placeholders */
+ 
 #footer-placeholder a,
 footer a {
     color: #ffffff !important; /* Forces white text */
