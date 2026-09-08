@@ -139,29 +139,33 @@
         }
 
         .teacher-hero-image-placeholder {
-            min-height: 365px;
-            border: 2px dashed rgba(6, 39, 70, .25);
-            border-radius: 20px;
-            background:
-                linear-gradient(135deg, rgba(6, 39, 70, .045), rgba(255, 196, 54, .08));
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 15px 35px rgba(10, 25, 47, .10);
+            position: relative;
+            width: 100%;
+            height: 390px;
+            border-radius: 22px;
+            background: linear-gradient(135deg, rgba(6, 39, 70, .06), rgba(255, 196, 54, .10));
+            border: 1px solid rgba(6, 39, 70, .12);
+            box-shadow: 0 18px 40px rgba(10, 25, 47, .14);
             overflow: hidden;
         }
 
+        .teacher-hero-image-placeholder > img.teacher-hiring-image {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+
         .teacher-placeholder-content {
-            width: 180px;
-            height: 180px;
-            display: flex;
-            flex-direction: column;
+            position: absolute;
+            inset: 0;
+            display: none;
             align-items: center;
             justify-content: center;
+            flex-direction: column;
             gap: 7px;
-            border-radius: 18px;
             color: var(--primary-color, #062746);
-            background: rgba(255, 255, 255, .75);
             text-align: center;
         }
 
@@ -446,7 +450,7 @@
             }
 
             .teacher-hero-image-placeholder {
-                min-height: 300px;
+                height: 310px;
             }
 
             .teacher-process {
@@ -510,10 +514,17 @@
                     
                
                  <div class="teacher-hero-image-placeholder">
+                    <!-- Change this src whenever you want to use another hiring image -->
+                    <img
+                        src="upload/we-are-hiring.webp"
+                        alt="Sapna Edutech Academy Faculty"
+                        class="teacher-hiring-image">
+
+                    <!-- Fallback placeholder -->
                     <div class="teacher-placeholder-content">
                         <i class="fa-regular fa-image"></i>
                         <span>Teacher / Faculty Image</span>
-                        <img src="upload/we-are-hiring.webp" alt="Sapna Edutech Academy Faculty">
+                        <small>Image Placeholder</small>
                     </div>
                 </div> 
 
