@@ -39,8 +39,7 @@
             ========================== -->
             <li>
 
-                <a href="index.html"
-                   class="active">
+                <a href="index.html">
 
                     Home
 
@@ -472,6 +471,65 @@
     font-size: 0.92rem;
 
     white-space: nowrap;
+
+}
+
+/* =====================================================
+   CURRENT / ACTIVE PAGE LINK
+   Automatically applied by JavaScript below.
+===================================================== */
+
+.nav-links > li > a.active {
+
+    color: #d97706 !important;
+
+    font-weight: 700;
+
+    position: relative;
+
+}
+
+.nav-links > li > a.active::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+
+    right: 0;
+
+    bottom: -6px;
+
+    height: 2px;
+
+    background: #d97706;
+
+    border-radius: 2px;
+
+}
+
+
+/* Active item inside dropdown */
+
+.dropdown-menu a.active {
+
+    background: #fff7ed;
+
+    color: #d97706 !important;
+
+    font-weight: 700;
+
+}
+
+
+/* Highlight dropdown heading when one of its pages is active */
+
+.dropdown.current-parent > .dropdown-toggle {
+
+    color: #d97706 !important;
+
+    font-weight: 700;
 
 }
 
@@ -1300,6 +1358,129 @@ document.addEventListener(
 
                 }
             );
+
+
+        /* =============================================
+           ACTIVE PAGE LINK
+           Detects the current HTML page automatically.
+           Works for normal links and dropdown links.
+        ============================================== */
+
+        (function setActivePage() {
+
+            const currentPath =
+                window.location.pathname
+                    .replace(/\/+/g, "/")
+                    .replace(/\/$/, "")
+                    .toLowerCase();
+
+            const currentFile =
+                currentPath.split("/").pop() || "index.html";
+
+            const allNavLinks =
+                document.querySelectorAll(
+                    ".header .nav-links a[href]"
+                );
+
+            allNavLinks.forEach(function (link) {
+
+                const href = link.getAttribute("href");
+
+                /* Ignore dropdown buttons such as href="#" */
+                if (
+                    !href ||
+                    href === "#" ||
+                    href.startsWith("#") ||
+                    href.startsWith("javascript:")
+                ) {
+                    return;
+                }
+
+                try {
+
+                    const linkUrl =
+                        new URL(
+                            href,
+                            window.location.href
+                        );
+
+                    const linkPath =
+                        linkUrl.pathname
+                            .replace(/\/+/g, "/")
+                            .replace(/\/$/, "")
+                            .toLowerCase();
+
+                    const linkFile =
+                        linkPath.split("/").pop() || "index.html";
+
+                    /*
+                     * Compare both the full pathname and filename.
+                     * Filename comparison keeps this working when the
+                     * website is inside a sub-folder.
+                     */
+                    const isCurrentPage =
+                        linkPath === currentPath ||
+                        linkFile === currentFile;
+
+                    if (isCurrentPage) {
+
+                        link.classList.add("active");
+
+                        link.setAttribute(
+                            "aria-current",
+                            "page"
+                        );
+
+                        /* If it is a dropdown item, highlight its parent */
+                        const parentDropdown =
+                            link.closest(".dropdown");
+
+                        if (parentDropdown) {
+
+                            parentDropdown.classList.add(
+                                "current-parent"
+                            );
+
+                        }
+
+                    }
+
+                } catch (error) {
+
+                    /* Ignore invalid/non-page href values */
+
+                }
+
+            });
+
+            /*
+             * Root URL should behave exactly like index.html.
+             * This covers domains where the homepage URL is simply "/".
+             */
+            if (
+                currentPath === "" ||
+                currentPath === "/"
+            ) {
+
+                const homeLink =
+                    document.querySelector(
+                        '.header .nav-links a[href="index.html"]'
+                    );
+
+                if (homeLink) {
+
+                    homeLink.classList.add("active");
+
+                    homeLink.setAttribute(
+                        "aria-current",
+                        "page"
+                    );
+
+                }
+
+            }
+
+        })();
 
 
         /* =============================================
