@@ -13,6 +13,80 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="css/Components.css">
     <link rel="stylesheet" href="css/sainik.marking-scheme.css">
+
+    <style>
+        /* Icon alignment fix - scoped to this page only */
+        .ss-card-header {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .ss-card-icon {
+            width: 48px;
+            height: 48px;
+            min-width: 48px;
+            flex: 0 0 48px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            line-height: 1;
+            margin: 0;
+            padding: 0;
+        }
+
+        .ss-card-icon i {
+            display: block;
+            width: 1em;
+            height: 1em;
+            line-height: 1;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        .ss-title-wrap {
+            flex: 1;
+            min-width: 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+        }
+
+        .ss-title-wrap .ss-card-heading {
+            margin: 0;
+        }
+
+        /* Keep the single heading card perfectly aligned with the icon */
+        .ss-card-header > .ss-card-heading {
+            margin: 0;
+            flex: 1;
+            min-width: 0;
+        }
+
+        /* Prevent icon/text drift on smaller screens */
+        @media (max-width: 640px) {
+            .ss-card-header {
+                align-items: flex-start;
+                gap: 12px;
+            }
+
+            .ss-card-icon {
+                width: 42px;
+                height: 42px;
+                min-width: 42px;
+                flex-basis: 42px;
+            }
+
+            .ss-title-wrap {
+                align-items: flex-start;
+                flex-direction: column;
+                gap: 8px;
+            }
+        }
+    </style>
+
 </head>
 
 <body>
