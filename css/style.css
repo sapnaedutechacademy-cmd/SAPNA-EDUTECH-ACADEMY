@@ -1093,7 +1093,7 @@ header,
   overflow: hidden;
   background: var(--white);
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-  height: 400px;
+  height: 320px;
   border: 1px solid rgba(10, 25, 47, 0.08);
 }
 
