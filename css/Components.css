@@ -420,6 +420,21 @@ header,
 }
 
 
+/* target links inside footer or header placeholders */
+#footer-placeholder a,
+footer a {
+    color: #ffffff !important; /* Forces white text */
+    text-decoration: none !important; /* Removes blue underline */
+    transition: color 0.3s ease;
+}
+
+/* Hover state */
+#footer-placeholder a:hover,
+footer a:hover {
+    color: #ff9800 !important; /* Accent color on hover */
+    text-decoration: underline !important;
+}
+
 
 
 
