@@ -245,12 +245,12 @@ a {
 
 .floating-text-badge {
   position: absolute;
-  bottom: 25px;
+  bottom: -40px;
   left: -35px;
   z-index: 10;
   background: var(--gold-gradient);
   color: var(--primary-color);
-  padding: 0.95rem 1.55rem;
+padding: 0.95rem 0.6rem;
   border-radius: 8px;
   border: 2px solid var(--white);
   font-size: 0.85rem;
