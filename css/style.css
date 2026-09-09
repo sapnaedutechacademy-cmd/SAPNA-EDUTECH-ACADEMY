@@ -38,6 +38,105 @@ a {
   color: inherit;
 }
 
+
+
+/* Card Link Button */
+.card-link-btn {
+  background: none;
+  border: none;
+  color: var(--accent-gold, #d97706);
+  font-weight: 700;
+  font-size: 0.95rem;
+  cursor: pointer;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.card-link-btn:hover {
+  color: var(--primary-color, #0a192f);
+  text-decoration: underline;
+}
+
+/* Modal Background Overlay */
+.custom-modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(10, 25, 47, 0.75);
+  backdrop-filter: blur(4px);
+}
+
+/* Modal Content Box */
+.modal-content {
+  background-color: #ffffff;
+  margin: 12% auto;
+  padding: 2rem;
+  border-radius: 16px;
+  width: 90%;
+  max-width: 480px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+  position: relative;
+  animation: modalPop 0.25s ease-out;
+}
+
+@keyframes modalPop {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.close-btn {
+  position: absolute;
+  top: 12px;
+  right: 18px;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #64748b;
+  cursor: pointer;
+}
+
+.close-btn:hover {
+  color: #d97706;
+}
+
+.modal-content h2 {
+  font-size: 1.25rem;
+  color: #0a192f;
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #d97706;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.modal-list {
+  list-style: none;
+  padding: 0;
+}
+
+.modal-list li {
+  padding: 0.65rem 0;
+  border-bottom: 1px dashed #e2e8f0;
+  font-size: 0.95rem;
+  color: #334155;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.modal-list li:last-child {
+  border-bottom: none;
+}
+
+.modal-list li i {
+  color: #d97706;
+}
 /* =========================================
    HERO SECTION
    ========================================= */
