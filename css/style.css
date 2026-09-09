@@ -1435,3 +1435,132 @@ header,
     margin-right: 0;
   }
 }
+
+/* =========================================
+   ADMISSION & TUTOR SECTION STYLES
+   ========================================= */
+.admission-selection {
+  padding: 3.5rem 1rem;
+  background-color: #f8fafc;
+}
+
+.admission-container {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 800;
+  color: #0a192f;
+  margin-bottom: 2rem;
+}
+
+.admission-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.admission-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 12px rgba(10, 25, 47, 0.05);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.admission-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(10, 25, 47, 0.1);
+}
+
+.admission-card .card-icon {
+  font-size: 2rem;
+  color: #d97706;
+  margin-bottom: 1rem;
+}
+
+.admission-card h3 {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #0a192f;
+  margin-bottom: 0.5rem;
+}
+
+.admission-card p {
+  font-size: 0.95rem;
+  color: #475569;
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+}
+
+/* BUTTON STYLES */
+.btn-tutor {
+  display: inline-block;
+  background-color: #0a192f;
+  color: #ffffff;
+  padding: 0.75rem 1.25rem;
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+  margin-top: auto;
+}
+
+.btn-tutor:hover {
+  background-color: #d97706;
+}
+
+/* TUITION LINKS LIST */
+.tuition-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  width: 100%;
+  margin-top: auto;
+}
+
+.tuition-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #f1f5f9;
+  color: #0a192f;
+  padding: 0.7rem 1rem;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-decoration: none;
+  border: 1px solid #cbd5e1;
+  transition: all 0.2s ease;
+}
+
+.tuition-btn i {
+  color: #d97706;
+}
+
+.tuition-btn:hover {
+  background-color: #0a192f;
+  color: #ffffff;
+  border-color: #0a192f;
+}
+
+.tuition-btn:hover i {
+  color: #ffffff;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 600px) {
+  .admission-grid {
+    grid-template-columns: 1fr;
+  }
+}
