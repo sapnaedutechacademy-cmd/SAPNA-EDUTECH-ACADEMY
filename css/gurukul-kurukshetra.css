@@ -648,16 +648,16 @@ a {
 }
 
 .gk-btn-accent {
-  background: var(--green-gradient);
+  background: linear-gradient(135deg, #0a192f 0%, #0c356a 100%) !important;
   color: var(--white);
   white-space: nowrap;
   font-weight: 800;
-  box-shadow: 0 4px 14px rgba(16, 185, 129, 0.3);
+  box-shadow: 0 4px 14px rgba(18, 46, 88, 0.3);
 }
 
 .gk-btn-accent:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 18px rgba(16, 185, 129, 0.45);
+  box-shadow: 0 6px 18px rgba(9, 33, 78, 0.45);
 }
 
 /* =========================================
@@ -681,7 +681,7 @@ a {
   }
 
   .gk-hero-title {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
   }
 
   .gk-white-card,
