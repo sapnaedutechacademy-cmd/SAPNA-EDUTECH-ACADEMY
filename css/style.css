@@ -38,8 +38,6 @@ a {
   color: inherit;
 }
 
-
- 
 /* =========================================
    HERO SECTION
    ========================================= */
@@ -156,16 +154,17 @@ a {
 }
 
 .hero-actions {
-  display: flex; 
+  display: flex;
   gap: 1rem;
   align-items: center;
 }
-@media(max-width:767px){
-.hero-actions {   
-     display: inline-grid!important; 
-  gap: 1rem;
-  align-items: center;
-} }
+@media (max-width: 767px) {
+  .hero-actions {
+    display: inline-grid !important;
+    gap: 1rem;
+    align-items: center;
+  }
+}
 
 .btn-primary-gradient {
   background: var(--hero-gradient);
@@ -252,7 +251,7 @@ a {
   z-index: 10;
   background: var(--gold-gradient);
   color: var(--primary-color);
-padding: 0.95rem 0.6rem;
+  padding: 0.95rem 0.6rem;
   border-radius: 8px;
   border: 2px solid var(--white);
   font-size: 0.85rem;

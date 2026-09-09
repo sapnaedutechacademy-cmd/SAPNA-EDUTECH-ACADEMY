@@ -13,203 +13,210 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
     <link rel="stylesheet" href="css/Components.css">
     <link rel="stylesheet" href="css/style.css">
-<style> .hero-slider-arrow {
-    display: none!important;
-    }
+    <style>
+        .hero-slider-arrow {
+            display: none !important;
+        }
 
-.floating-icon-badge {
-    z-index: 9!important;
-}
-img.contact-gif {
-    border-radius: 38px;
-    width: 70%;
-} 
+        .floating-icon-badge {
+            z-index: 9 !important;
+        }
 
-.cta-compact-action {
-    background: linear-gradient(135deg, #d98806 0%, #ffc436 100%);
-}
-@media(max-width:767px){ .cta-compact-cards {
-    display: block!important;
-} }
+        img.contact-gif {
+            border-radius: 38px;
+            width: 70%;
+        }
 
-.cta-compact-action {
-    font-weight: 600;
-    color: black;
-    width: 183px;
-    background: linear-gradient(135deg, #00ff66 0%, #00ff66 100%);
-    padding: 11px;
-    border-radius: 12px!important;
-}
+        .cta-compact-action {
+            background: linear-gradient(135deg, #d98806 0%, #ffc436 100%);
+        }
 
-.contact-grid {
-    display: grid;
-    grid-template-columns: 1.25fr 0.75fr!important;
-    gap: 2rem;
-    margin-top: 2.5rem;
-    align-items: start;
-}
-.cta-compact-cards {
-    color:white;
-    width: 100%;
-    max-width: 850px;
-    background: linear-gradient(135deg, var(--primary-color) 0%, #092c3e 100%);
-    border: 1px solid rgba(217, 119, 6, 0.3);
-    border-radius: 20px;
-    padding: 2.75rem 1.5rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 1.0rem;
-    box-shadow: 0 15px 35px rgba(10, 25, 47, 0.18);
-    position: relative;
-    overflow: hidden;
-}
+        @media(max-width:767px) {
+            .cta-compact-cards {
+                display: block !important;
+            }
+        }
 
-/* HERO FADE SLIDER - isolated to the hero image */
-.hero-image-wrapper {
-    position: relative;
-}
+        .cta-compact-action {
+            font-weight: 600;
+            color: black;
+            width: 183px;
+            background: linear-gradient(135deg, #00ff66 0%, #00ff66 100%);
+            padding: 11px;
+            border-radius: 12px !important;
+        }
 
-.hero-image-slider {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    min-height: 420px;
-    overflow: hidden;
-    border-radius: inherit;
-}
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1.25fr 0.75fr !important;
+            gap: 2rem;
+            margin-top: 2.5rem;
+            align-items: start;
+        }
 
-.hero-image-slide {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    opacity: 0;
-    visibility: hidden;
-    z-index: 0;
-    transition: opacity 0.9s ease-in-out, visibility 0s linear 0.9s;
-    will-change: opacity;
-}
+        .cta-compact-cards {
+            color: white;
+            width: 100%;
+            max-width: 850px;
+            background: linear-gradient(135deg, var(--primary-color) 0%, #092c3e 100%);
+            border: 1px solid rgba(217, 119, 6, 0.3);
+            border-radius: 20px;
+            padding: 2.75rem 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1.0rem;
+            box-shadow: 0 15px 35px rgba(10, 25, 47, 0.18);
+            position: relative;
+            overflow: hidden;
+        }
 
-.hero-image-slide.is-active {
-    opacity: 1;
-    visibility: visible;
-    z-index: 1;
-    transition: opacity 0.9s ease-in-out;
-}
+        /* HERO FADE SLIDER - isolated to the hero image */
+        .hero-image-wrapper {
+            position: relative;
+        }
 
-.hero-slider-arrow {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 5;
-    width: 42px;
-    height: 42px;
-    border: 0;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    color: #fff;
-    background: rgba(0, 0, 0, 0.38);
-    backdrop-filter: blur(6px);
-    -webkit-backdrop-filter: blur(6px);
-    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.15);
-    transition: background .25s ease, transform .25s ease, opacity .25s ease;
-}
+        .hero-image-slider {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            min-height: 420px;
+            overflow: hidden;
+            border-radius: inherit;
+        }
 
-.hero-slider-arrow:hover {
-    background: rgba(0, 0, 0, 0.62);
-}
+        .hero-image-slide {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0;
+            visibility: hidden;
+            z-index: 0;
+            transition: opacity 0.9s ease-in-out, visibility 0s linear 0.9s;
+            will-change: opacity;
+        }
 
-.hero-slider-arrow:active {
-    transform: translateY(-50%) scale(.94);
-}
+        .hero-image-slide.is-active {
+            opacity: 1;
+            visibility: visible;
+            z-index: 1;
+            transition: opacity 0.9s ease-in-out;
+        }
 
-.hero-slider-prev {
-    left: 14px;
-}
+        .hero-slider-arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 5;
+            width: 42px;
+            height: 42px;
+            border: 0;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            color: #fff;
+            background: rgba(0, 0, 0, 0.38);
+            backdrop-filter: blur(6px);
+            -webkit-backdrop-filter: blur(6px);
+            box-shadow: 0 5px 18px rgba(0, 0, 0, 0.15);
+            transition: background .25s ease, transform .25s ease, opacity .25s ease;
+        }
 
-.hero-slider-next {
-    right: 14px;
-}
+        .hero-slider-arrow:hover {
+            background: rgba(0, 0, 0, 0.62);
+        }
 
-.hero-slider-dots {
-    position: absolute;
-    left: 50%;
-    bottom: 16px;
-    transform: translateX(-50%);
-    z-index: 5;
-    display: flex;
-    align-items: center;
-    gap: 7px;
-    padding: 7px 10px;
-    border-radius: 999px;
-    background: rgba(0, 0, 0, 0.28);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
-}
+        .hero-slider-arrow:active {
+            transform: translateY(-50%) scale(.94);
+        }
 
-.hero-slider-dot {
-    width: 8px;
-    height: 8px;
-    padding: 0;
-    border: 0;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.58);
-    cursor: pointer;
-    transition: width .25s ease, background .25s ease, transform .25s ease;
-}
+        .hero-slider-prev {
+            left: 14px;
+        }
 
-.hero-slider-dot:hover {
-    transform: scale(1.15);
-}
+        .hero-slider-next {
+            right: 14px;
+        }
 
-.hero-slider-dot.is-active {
-    width: 22px;
-    border-radius: 999px;
-    background: #fff;
-}
+        .hero-slider-dots {
+            position: absolute;
+            left: 50%;
+            bottom: 16px;
+            transform: translateX(-50%);
+            z-index: 5;
+            display: flex;
+            align-items: center;
+            gap: 7px;
+            padding: 7px 10px;
+            border-radius: 999px;
+            background: rgba(0, 0, 0, 0.28);
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
+        }
 
-.hero-slider-arrow:focus-visible,
-.hero-slider-dot:focus-visible {
-    outline: 2px solid #fff;
-    outline-offset: 3px;
-}
+        .hero-slider-dot {
+            width: 8px;
+            height: 8px;
+            padding: 0;
+            border: 0;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.58);
+            cursor: pointer;
+            transition: width .25s ease, background .25s ease, transform .25s ease;
+        }
 
-@media (max-width: 767px) {
-    .hero-image-slider {
-        min-height: 300px;
-    }
+        .hero-slider-dot:hover {
+            transform: scale(1.15);
+        }
 
-    .hero-slider-arrow {
-        width: 36px;
-        height: 36px;
-    }
+        .hero-slider-dot.is-active {
+            width: 22px;
+            border-radius: 999px;
+            background: #fff;
+        }
 
-    .hero-slider-prev {
-        left: 9px;
-    }
+        .hero-slider-arrow:focus-visible,
+        .hero-slider-dot:focus-visible {
+            outline: 2px solid #fff;
+            outline-offset: 3px;
+        }
 
-    .hero-slider-next {
-        right: 9px;
-    }
+        @media (max-width: 767px) {
+            .hero-image-slider {
+                min-height: 300px;
+            }
 
-    .hero-slider-dots {
-        bottom: 10px;
-    }
-}
+            .hero-slider-arrow {
+                width: 36px;
+                height: 36px;
+            }
 
-@media (prefers-reduced-motion: reduce) {
-    .hero-image-slide,
-    .hero-slider-arrow,
-    .hero-slider-dot {
-        transition: none !important;
-    }
-}
-</style>
+            .hero-slider-prev {
+                left: 9px;
+            }
+
+            .hero-slider-next {
+                right: 9px;
+            }
+
+            .hero-slider-dots {
+                bottom: 10px;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+
+            .hero-image-slide,
+            .hero-slider-arrow,
+            .hero-slider-dot {
+                transition: none !important;
+            }
+        }
+    </style>
 
 </head>
 
@@ -277,24 +284,18 @@ img.contact-gif {
                             Keep the same structure/classes for a smooth fade slider.
                         -->
                         <img class="hero-image-slide is-active"
-                             src="https://sapna-edutech-academy.sapnaedutechacademy.workers.dev/upload/hero-img.jpeg"
-                             alt="Sapna Academy Coaching Classroom">
-                        <img class="hero-image-slide"
-                             src="upload/hero-img-3.webp"
-                             alt="Sapna Academy Coaching Classroom">
-                        <img class="hero-image-slide"
-                             src="upload/hero-seciont.webp"
-                             alt="Sapna Academy Coaching Classroom">
+                            src="https://sapna-edutech-academy.sapnaedutechacademy.workers.dev/upload/hero-img.jpeg"
+                            alt="Sapna Academy Coaching Classroom">
+                        <img class="hero-image-slide" src="upload/hero-img-3.webp"
+                            alt="Sapna Academy Coaching Classroom">
+                        <img class="hero-image-slide" src="upload/hero-seciont.webp"
+                            alt="Sapna Academy Coaching Classroom">
 
-                        <button type="button"
-                                class="hero-slider-arrow hero-slider-prev"
-                                aria-label="Previous slide">
+                        <button type="button" class="hero-slider-arrow hero-slider-prev" aria-label="Previous slide">
                             <i class="fa-solid fa-chevron-left"></i>
                         </button>
 
-                        <button type="button"
-                                class="hero-slider-arrow hero-slider-next"
-                                aria-label="Next slide">
+                        <button type="button" class="hero-slider-arrow hero-slider-next" aria-label="Next slide">
                             <i class="fa-solid fa-chevron-right"></i>
                         </button>
 
@@ -413,7 +414,7 @@ img.contact-gif {
                     </a>
                 </div>
 
-             <div class="gg-card">
+                <div class="gg-card">
                     <div>
                         <div class="gg-icon-wrapper">
                             <i class="fa-solid fa-laptop-code"></i>
@@ -424,7 +425,7 @@ img.contact-gif {
                             shorthand tailored for both students and job seekers.
                         </p>
                     </div>
-                    <a href="#contact" class="gg-card-link">
+                    <a href="it-course.html" class="gg-card-link">
                         View IT Courses <i class="fa-solid fa-arrow-right"></i>
                     </a>
                 </div>
@@ -439,8 +440,8 @@ img.contact-gif {
                             Railway examinations with continuous mock test series.
                         </p>
                     </div>
-                    <a href="sainik-intro-age.html" class="gg-card-link">
-                        Batch Details <i class="fa-solid fa-arrow-right"></i>
+                    <a href="competitive-courses.html" class="gg-card-link">
+                        Views Courses <i class="fa-solid fa-arrow-right"></i>
                     </a>
                 </div>
             </div>
@@ -520,30 +521,26 @@ img.contact-gif {
 
         <div class="gallery-grid">
             <div class="gallery-item">
-                <img src="upload/about-img.jpg"
-                    alt="Classroom">
+                <img src="upload/about-img.jpg" alt="Classroom">
                 <div class="gallery-overlay">
                     <span>Classroom</span>
                 </div>
             </div>
-          
+
             <div class="gallery-item">
-                <img src="upload/fifth-img.webp"
-                    alt="Students">
+                <img src="upload/fifth-img.webp" alt="Students">
                 <div class="gallery-overlay">
                     <span>Students</span>
                 </div>
             </div>
             <div class="gallery-item">
-                <img src="upload/fourth-img.jpg"
-                    alt="Teaching">
+                <img src="upload/fourth-img.jpg" alt="Teaching">
                 <div class="gallery-overlay">
                     <span>Teaching</span>
                 </div>
             </div>
-           <div class="gallery-item">
-                <img src="upload/success-img.webp"
-                    alt="Success">
+            <div class="gallery-item">
+                <img src="upload/success-img.webp" alt="Success">
                 <div class="gallery-overlay">
                     <span>Success</span>
                 </div>
@@ -551,108 +548,109 @@ img.contact-gif {
         </div>
     </section>
 
-<!-- CONTACT SECTION -->
-<section class="contact-section" id="contact">
-    <div class="contact-container">
-        <div class="section-header">
-            <div class="eyebrow-tag">
-                <span class="eyebrow-bar"></span>
-                <span class="eyebrow-text">GET IN TOUCH</span>
-            </div>
-            <h2 class="section-title">Contact Sapna Edutech Academy</h2>
-            <p class="section-subtitle">
-                Have questions about admissions, courses, fees, or batch timings?
-                We are here to help!
-            </p>
-        </div>
-
-        <div class="contact-grid">
-            <div class="contact-info-wrapper">
-
-                <div class="contact-card">
-                    <div class="contact-icon-box">
-                        <i class="fa-solid fa-location-dot"></i>
-                    </div>
-                    <div class="contact-card-content">
-                        <h5>Academy Address</h5>
-                        <p>Church Road, Gate No. 2, Nayagaon, Mohali, Punjab</p>
-                    </div>
+    <!-- CONTACT SECTION -->
+    <section class="contact-section" id="contact">
+        <div class="contact-container">
+            <div class="section-header">
+                <div class="eyebrow-tag">
+                    <span class="eyebrow-bar"></span>
+                    <span class="eyebrow-text">GET IN TOUCH</span>
                 </div>
-
-                <div class="contact-card">
-                    <div class="contact-icon-box">
-                        <i class="fa-solid fa-phone"></i>
-                    </div>
-                    <div class="contact-card-content">
-                        <h5>Call Us</h5>
-                        <p>
-                            <a href="tel:+917508298749">+91 75082 98749</a>
-                        </p>
-                    </div>
-                </div>
-
-                <div class="contact-card">
-                    <div class="contact-icon-box">
-                        <i class="fa-solid fa-envelope"></i>
-                    </div>
-                    <div class="contact-card-content">
-                        <h5>Email Address</h5>
-                        <a href="mailto:sapnaedutechacademy@gmail.com">
-                            sapnaedutechacademy@gmail.com
-                        </a>
-                    </div>
-                </div>
-
-                <div class="contact-card">
-                    <div class="contact-icon-box">
-                        <i class="fa-solid fa-globe"></i>
-                    </div>
-                    <div class="contact-card-content">
-                        <h5>Official Website</h5>
-                        <a href="https://sapnaedutechacademy.wordpress.com"
-                           target="_blank">
-                            sapnaedutechacademy.wordpress.com
-                        </a>
-                    </div>
-                </div>
-         
-                <!-- end -->
-                <div class="contact-card">
-                    <div class="contact-icon-box">
-                        <i class="fa-solid fa-clock"></i>
-                    </div>
-                    <div class="contact-card-content">
-                        <h5>Office Hours</h5>
-                        <p>
-                            <span class="hours-tag">
-                                Monday – Sunday: 6:00 AM – 10:00 PM
-                            </span>
-                        </p>
-                    </div>
-                </div>
-                 
-  <!-- section start -->
-  <section class="cta-compact-wrapper">
-            <div class="cta-compact-cards">
-                <div class="cta-compact-content">
-                    <h3>Quick Connect Via WhatsApp</h3>
-                    <p style="margin-bottom:10px;">Join Sapna Edutech Academy today for expert coaching and personal mentorship.</p>
-                </div>
-                <div class="cta-compact-action">
-                    <a href="https://wa.me/917508298749?text=Hello%20Sapna%20Edutech%20Academy!%20%F0%9F%91%8B%0AI%20would%20like%20to%20know%20more%20about%20your%20courses%20and%20admission%20process.%20Please%20share%20the%20details.%20Thank%20you!" target="_blank" class="cta-compact-btn">
-                        <i class="fa-brands fa-whatsapp"></i> Quick Connect
-                    </a>
-                </div>
-            </div>
-        </section>
-
+                <h2 class="section-title">Contact Sapna Edutech Academy</h2>
+                <p class="section-subtitle">
+                    Have questions about admissions, courses, fees, or batch timings?
+                    We are here to help!
+                </p>
             </div>
 
-            <!--
+            <div class="contact-grid">
+                <div class="contact-info-wrapper">
+
+                    <div class="contact-card">
+                        <div class="contact-icon-box">
+                            <i class="fa-solid fa-location-dot"></i>
+                        </div>
+                        <div class="contact-card-content">
+                            <h5>Academy Address</h5>
+                            <p>Church Road, Gate No. 2, Nayagaon, Mohali, Punjab</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-card">
+                        <div class="contact-icon-box">
+                            <i class="fa-solid fa-phone"></i>
+                        </div>
+                        <div class="contact-card-content">
+                            <h5>Call Us</h5>
+                            <p>
+                                <a href="tel:+917508298749">+91 75082 98749</a>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="contact-card">
+                        <div class="contact-icon-box">
+                            <i class="fa-solid fa-envelope"></i>
+                        </div>
+                        <div class="contact-card-content">
+                            <h5>Email Address</h5>
+                            <a href="mailto:sapnaedutechacademy@gmail.com">
+                                sapnaedutechacademy@gmail.com
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="contact-card">
+                        <div class="contact-icon-box">
+                            <i class="fa-solid fa-globe"></i>
+                        </div>
+                        <div class="contact-card-content">
+                            <h5>Official Website</h5>
+                            <a href="https://sapnaedutechacademy.wordpress.com" target="_blank">
+                                sapnaedutechacademy.wordpress.com
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- end -->
+                    <div class="contact-card">
+                        <div class="contact-icon-box">
+                            <i class="fa-solid fa-clock"></i>
+                        </div>
+                        <div class="contact-card-content">
+                            <h5>Office Hours</h5>
+                            <p>
+                                <span class="hours-tag">
+                                    Monday – Sunday: 6:00 AM – 10:00 PM
+                                </span>
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- section start -->
+                    <section class="cta-compact-wrapper">
+                        <div class="cta-compact-cards">
+                            <div class="cta-compact-content">
+                                <h3>Quick Connect Via WhatsApp</h3>
+                                <p style="margin-bottom:10px;">Join Sapna Edutech Academy today for expert coaching and
+                                    personal mentorship.</p>
+                            </div>
+                            <div class="cta-compact-action">
+                                <a href="https://wa.me/917508298749?text=Hello%20Sapna%20Edutech%20Academy!%20%F0%9F%91%8B%0AI%20would%20like%20to%20know%20more%20about%20your%20courses%20and%20admission%20process.%20Please%20share%20the%20details.%20Thank%20you!"
+                                    target="_blank" class="cta-compact-btn">
+                                    <i class="fa-brands fa-whatsapp"></i> Quick Connect
+                                </a>
+                            </div>
+                        </div>
+                    </section>
+
+                </div>
+
+                <!--
                 CONTACT FORM HIDDEN — DELETE NAHI KIYA HAI.
                 Baad mein comment hata kar form wapas enable kar sakte ho.
             -->
-            <!--
+                <!--
             <div class="contact-form-card">
                 <h3>Send Us A Message</h3>
                 <p>Fill out the form below and our counseling team will get back to you shortly.</p>
@@ -694,16 +692,14 @@ img.contact-gif {
             </div>
             -->
 
-            <!-- GIF PLACEHOLDER -->
-            <div class="contact-gif-wrapper">
-                <img src="upload/edu_chat.gif"
-                     alt="Contact Sapna Edutech Academy"
-                     class="contact-gif">
-            </div>
+                <!-- GIF PLACEHOLDER -->
+                <div class="contact-gif-wrapper">
+                    <img src="upload/edu_chat.gif" alt="Contact Sapna Edutech Academy" class="contact-gif">
+                </div>
 
+            </div>
         </div>
-    </div>
-</section>
+    </section>
 
     <!-- CTA SECTION -->
     <section class="cta-section">
@@ -722,7 +718,8 @@ img.contact-gif {
             </p>
 
             <div class="cta-actions">
-                <a href="https://wa.me/917508298749?text=Hello%20Sapna%20Edutech%20Academy!%20%F0%9F%91%8B%0AI%20would%20like%20to%20know%20more%20about%20your%20courses%20and%20admission%20process.%20Please%20share%20the%20details.%20Thank%20you!" class="btn-cta-primary">
+                <a href="https://wa.me/917508298749?text=Hello%20Sapna%20Edutech%20Academy!%20%F0%9F%91%8B%0AI%20would%20like%20to%20know%20more%20about%20your%20courses%20and%20admission%20process.%20Please%20share%20the%20details.%20Thank%20you!"
+                    class="btn-cta-primary">
                     Apply For Admission <i class="fa-solid fa-paper-plane"></i>
                 </a>
             </div>
