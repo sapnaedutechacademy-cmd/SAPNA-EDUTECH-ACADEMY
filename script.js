@@ -71,3 +71,21 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+
+
+<script>
+    function openModal(id) {
+        document.getElementById(id).style.display = "block";
+    }
+
+    function closeModal(id) {
+        document.getElementById(id).style.display = "none";
+    }
+
+    // Close modal if user clicks outside the modal box
+    window.onclick = function(event) {
+        if (event.target.classList.contains('custom-modal')) {
+            event.target.style.display = "none";
+        }
+    }
+</script>
