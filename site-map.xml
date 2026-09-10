@@ -1,6 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+    <!-- Homepage -->
+    <url>
+        <loc>https://sapnaedutechacademy.in/</loc>
+        <lastmod>2026-09-10</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <!-- About -->
+    <url>
+        <loc>https://sapnaedutechacademy.in/about.html</loc>
+        <lastmod>2026-09-10</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- Contact -->
+    <url>
+        <loc>https://sapnaedutechacademy.in/contact.html</loc>
+        <lastmod>2026-09-10</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <!-- Flowchart -->
+    <url>
+        <loc>https://sapnaedutechacademy.in/flowchart.html</loc>
+        <lastmod>2026-09-10</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <!-- Student Admission -->
+    <url>
+        <loc>https://sapnaedutechacademy.in/students-admission.html</loc>
+        <lastmod>2026-09-10</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- Teacher Hiring -->
+    <url>
+        <loc>https://sapnaedutechacademy.in/teacher-hiring.html</loc>
+        <lastmod>2026-09-10</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <!-- RMS Details -->
+    <url>
+        <loc>https://sapnaedutechacademy.in/rms-details.html</loc>
+        <lastmod>2026-09-10</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- RMS 9th Syllabus -->
+    <url>
+        <loc>https://sapnaedutechacademy.in/rms-syllabus-9th.html</loc>
+        <lastmod>2026-09-10</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- RMS 6th Syllabus -->
+    <url>
+        <loc>https://sapnaedutechacademy.in/rms-syllabus-6th.html</loc>
+        <lastmod>2026-09-10</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- RIMC -->
+    <url>
+        <loc>https://sapnaedutechacademy.in/rimc.html</loc>
+        <lastmod>2026-09-10</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- RIMC Syllabus -->
+    <url>
+        <loc>https://sapnaedutechacademy.in/rimc-syllabus.html</loc>
+        <lastmod>2026-09-10</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
     <!-- School & College Courses -->
     <url>
-        <loc>https://sapna-edutech-academy.sapnaedutechacademy.workers.dev/school-college.html</loc>
+        <loc>https://sapnaedutechacademy.in/school-college.html</loc>
         <lastmod>2026-09-10</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
@@ -8,7 +99,55 @@
 
     <!-- IT Courses -->
     <url>
-        <loc>https://sapna-edutech-academy.sapnaedutechacademy.workers.dev/it-course.html</loc>
+        <loc>https://sapnaedutechacademy.in/it-course.html</loc>
+        <lastmod>2026-09-10</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- Sainik School Introduction & Age -->
+    <url>
+        <loc>https://sapnaedutechacademy.in/sainik-intro-age.html</loc>
+        <lastmod>2026-09-10</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- Sainik School Marking Scheme -->
+    <url>
+        <loc>https://sapnaedutechacademy.in/sainik-marking-scheme.html</loc>
+        <lastmod>2026-09-10</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <!-- Sainik School Syllabus -->
+    <url>
+        <loc>https://sapnaedutechacademy.in/sainik-school-syllabus.html</loc>
+        <lastmod>2026-09-10</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+
+    <!-- List of Sainik Schools -->
+    <url>
+        <loc>https://sapnaedutechacademy.in/list-sainik-schoool.html</loc>
+        <lastmod>2026-09-10</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- JNV Syllabus -->
+    <url>
+        <loc>https://sapnaedutechacademy.in/jnv-syllabus.html</loc>
+        <lastmod>2026-09-10</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+
+    <!-- Gurukul Kurukshetra -->
+    <url>
+        <loc>https://sapnaedutechacademy.in/gurukul-kurukshetra.html</loc>
         <lastmod>2026-09-10</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
@@ -16,32 +155,10 @@
 
     <!-- Competitive Courses -->
     <url>
-        <loc>https://sapna-edutech-academy.sapnaedutechacademy.workers.dev/competitive-courses.html</loc>
+        <loc>https://sapnaedutechacademy.in/competitive-courses.html</loc>
         <lastmod>2026-09-10</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
 
-    <!-- Gurukul Kurukshetra -->
-    <url>
-        <loc>https://sapna-edutech-academy.sapnaedutechacademy.workers.dev/gurukul-kurukshetra.html</loc>
-        <lastmod>2026-09-10</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-
-    <!-- Student Admission -->
-    <url>
-        <loc>https://sapna-edutech-academy.sapnaedutechacademy.workers.dev/students-admission.html</loc>
-        <lastmod>2026-09-10</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
-    </url>
-
-    <!-- Teacher Hiring -->
-    <url>
-        <loc>https://sapna-edutech-academy.sapnaedutechacademy.workers.dev/teacher-hiring.html</loc>
-        <lastmod>2026-09-10</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.6</priority>
-    </url>
+</urlset>
