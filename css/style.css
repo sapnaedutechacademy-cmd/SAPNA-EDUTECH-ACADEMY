@@ -274,6 +274,20 @@ a {
   }
 }
 
+@media (max-width: 767px) {
+  .floating-text-badge {
+    left: -20px;
+  }
+
+  .stat-box h3 {
+    font-size: 1.6rem;
+  }
+
+  .sa-floating-badge {
+    right: 15px;
+  }
+}
+
 /* =========================================
    ABOUT SECTION
    ========================================= */
