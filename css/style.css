@@ -290,6 +290,9 @@ a {
   .section-title {
     line-height: 2.2rem;
   }
+  .hero-tech {
+    padding-bottom: 20px;
+  }
 }
 
 /* =========================================
