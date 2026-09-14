@@ -1236,151 +1236,6 @@ header,
     margin-right: 0;
   }
 }
-.admission-selection {
-  padding: 60px 20px;
-  background-color: #f8fafc;
-}
-.admission-container {
-  max-width: 1100px;
-  margin: 0 auto;
-}
-.section-header {
-  text-align: center;
-  margin-bottom: 40px;
-}
-.section-title {
-  font-size: 2rem;
-  color: #0f172a;
-  font-weight: 700;
-}
-.section-subtitle {
-  color: #64748b;
-  margin-top: 8px;
-  font-size: 1rem;
-}
-.admission-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 30px;
-  align-items: stretch;
-}
-.admission-card {
-  background: #ffffff;
-  border-radius: 16px;
-  padding: 32px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
-  border: 1px solid #e2e8f0;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  transition:
-    transform 0.3s ease,
-    box-shadow 0.3s ease;
-}
-.admission-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
-}
-.card-header {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  margin-bottom: 16px;
-}
-.card-icon {
-  width: 50px;
-  height: 50px;
-  background: #fef8ec;
-  color: #d98806;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.5rem;
-  border-radius: 12px;
-  flex-shrink: 0;
-}
-.card-badge {
-  display: inline-block;
-  font-size: 0.75rem;
-  font-weight: 600;
-  color: #d98806;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-}
-.card-header h3 {
-  font-size: 1.35rem;
-  color: #0f172a;
-  margin: 0;
-}
-.admission-card p {
-  color: #475569;
-  font-size: 0.95rem;
-  line-height: 1.6;
-  margin-bottom: 20px;
-}
-.card-features {
-  list-style: none;
-  padding: 0;
-  margin: 0 0 24px 0;
-}
-.card-features li {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-size: 0.9rem;
-  color: #334155;
-  margin-bottom: 8px;
-}
-.card-features i {
-  color: #16a34a;
-}
-.btn-tutor {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  background: #0f172a;
-  color: #ffffff;
-  padding: 14px 24px;
-  border-radius: 10px;
-  text-decoration: none;
-  font-weight: 600;
-  transition: background 0.3s ease;
-  margin-top: auto;
-}
-.btn-tutor:hover {
-  background: #1e293b;
-}
-.tuition-links {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-.tuition-btn {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  padding: 12px 18px;
-  background: #f8fafc;
-  border: 1px solid #cbd5e1;
-  border-radius: 10px;
-  color: #0f172a;
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 0.95rem;
-  transition: all 0.2s ease;
-}
-.tuition-btn i {
-  color: #d98806;
-}
-.tuition-btn:hover {
-  background: #d98806;
-  color: #ffffff;
-  border-color: #d98806;
-}
-.tuition-btn:hover i {
-  color: #ffffff;
-}
 
 /* =========================================================
    CLOUDINARY HOME GALLERY
@@ -1435,7 +1290,7 @@ header,
 .gallery-section-header p {
   margin: 0;
   color: var(--text-gray, #64748b);
-  line-height: 1.7;
+  line-height: 1.5;
 }
 
 /* ================= CAROUSEL ================= */
@@ -1668,7 +1523,7 @@ header,
 ========================================== */
 
 .reviews-section {
-  padding: 80px 20px;
+  padding: 40px 20px;
   background:
     radial-gradient(
       circle at 10% 20%,
@@ -1681,7 +1536,7 @@ header,
 }
 
 .reviews-container {
-  max-width: 1250px;
+  max-width: 1240px;
   margin: 0 auto;
 }
 
@@ -1775,6 +1630,7 @@ header,
   max-width: 750px;
   margin: 0 auto;
   text-align: center;
+  padding-bottom: 20px;
 }
 
 .simple-gallery-label {
