@@ -1435,7 +1435,7 @@ header,
 .gallery-section-header p {
   margin: 0;
   color: var(--text-gray, #64748b);
-  line-height: 1.7;
+  line-height: 1.5;
 }
 
 /* ================= CAROUSEL ================= */
@@ -1668,7 +1668,7 @@ header,
 ========================================== */
 
 .reviews-section {
-  padding: 80px 20px;
+  padding: 40px 20px;
   background:
     radial-gradient(
       circle at 10% 20%,
@@ -1681,7 +1681,7 @@ header,
 }
 
 .reviews-container {
-  max-width: 1250px;
+  max-width: 1240px;
   margin: 0 auto;
 }
 
@@ -1775,6 +1775,7 @@ header,
   max-width: 750px;
   margin: 0 auto;
   text-align: center;
+  padding-bottom: 20px;
 }
 
 .simple-gallery-label {
