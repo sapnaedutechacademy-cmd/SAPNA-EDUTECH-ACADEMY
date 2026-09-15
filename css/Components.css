@@ -756,6 +756,12 @@ footer a:hover {
   .whatsapp-toggle[aria-expanded="true"] .whatsapp-close-icon { display: grid; }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 539px) {
   .whatsapp-widget { right: 16px; bottom: 16px; }
+  .whatsapp-toggle {
+    width: 56px;
+    min-width: 56px;
+    padding: 0;
+    justify-content: center;
+  }
 }
