@@ -13,6 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
     .then((response) => response.text())
     .then((data) => {
       document.getElementById("footer-placeholder").innerHTML = data;
+      initWhatsAppChat();
     });
 });
 
@@ -82,6 +83,7 @@ document.addEventListener("DOMContentLoaded", () => {
     .then((response) => response.text())
     .then((data) => {
       document.getElementById("footer-placeholder").innerHTML = data;
+      initWhatsAppChat();
     });
 });
 
@@ -110,6 +112,24 @@ function initMobileMenu() {
         }
       });
     }
+  });
+}
+
+// Floating WhatsApp panel loaded with the shared footer
+function initWhatsAppChat() {
+  const toggle = document.querySelector(".whatsapp-toggle");
+  const panel = document.getElementById("whatsapp-panel");
+
+  if (!toggle || !panel) return;
+
+  toggle.addEventListener("click", () => {
+    const isOpen = toggle.getAttribute("aria-expanded") === "true";
+    toggle.setAttribute("aria-expanded", String(!isOpen));
+    toggle.setAttribute(
+      "aria-label",
+      isOpen ? "Open WhatsApp chat" : "Close WhatsApp chat",
+    );
+    panel.hidden = isOpen;
   });
 }
 
