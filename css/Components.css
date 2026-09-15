@@ -628,3 +628,134 @@ footer a:hover {
     gap: 2rem;
   }
 }
+
+/* =========================================
+   FLOATING WHATSAPP CHAT
+   ========================================= */
+.whatsapp-widget {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  z-index: 1100;
+  font-family: inherit;
+}
+
+.whatsapp-toggle {
+  border: 0;
+  background: #25d366;
+  color: #fff;
+  min-width: 56px;
+  height: 56px;
+  padding: 0 16px;
+  border-radius: 28px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  margin-left: auto;
+  box-shadow: 0 8px 22px rgba(37, 211, 102, 0.35);
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.whatsapp-toggle:hover {
+  background: #1ebe5a;
+  transform: translateY(-2px);
+}
+
+.whatsapp-toggle-label {
+  display: none;
+  background: #fff;
+  color: #334155;
+  border-radius: 4px;
+  padding: 9px 12px;
+  font-size: 0.78rem;
+  white-space: nowrap;
+}
+
+.whatsapp-toggle i { font-size: 1.9rem; }
+.whatsapp-close-icon { display: none; }
+.whatsapp-toggle[aria-expanded="true"] .whatsapp-open-icon { display: none; }
+.whatsapp-toggle[aria-expanded="true"] .whatsapp-close-icon { display: block; font-size: 1.45rem; }
+
+.whatsapp-panel {
+  width: min(350px, calc(100vw - 32px));
+  margin: 0 0 16px auto;
+  overflow: hidden;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0 12px 34px rgba(15, 23, 42, 0.26);
+}
+
+.whatsapp-panel[hidden] { display: none; }
+
+.whatsapp-panel-header {
+  padding: 21px 22px;
+  background: #25d366;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.whatsapp-panel-header > i { font-size: 2.35rem; }
+.whatsapp-panel-header strong,
+.whatsapp-contact-card strong { display: block; }
+.whatsapp-panel-header strong { color: #ffc436; font-size: 1.08rem; font-weight: 600; }
+.whatsapp-panel-header span { display: block; margin-top: 4px; font-size: 0.78rem; line-height: 1.45; }
+
+.whatsapp-panel-body { padding: 14px 20px 20px; }
+.whatsapp-panel-body > p { margin: 0 0 14px; color: #94a3b8; font-size: 0.75rem; }
+
+.whatsapp-contact-card {
+  border-left: 2px solid #25d366;
+  background: #f1f5f9;
+  padding: 12px 14px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #334155 !important;
+  text-decoration: none !important;
+}
+
+.whatsapp-contact-card:hover { color: #334155 !important; text-decoration: none !important; background: #e9f8ee; }
+.whatsapp-contact-icon { color: #fff; background: #25d366; width: 43px; height: 43px; border-radius: 50%; display: grid; place-items: center; font-size: 1.65rem; flex: 0 0 auto; }
+.whatsapp-contact-card strong { font-size: 0.85rem; font-weight: 600; }
+.whatsapp-contact-card small { display: block; color: #94a3b8; font-size: 0.7rem; margin-top: 2px; }
+.whatsapp-card-arrow { margin-left: auto; color: #25d366; font-size: 1.25rem; }
+
+/* Override the footer's white-link rule only inside the WhatsApp card. */
+#footer-placeholder .whatsapp-contact-card,
+#footer-placeholder .whatsapp-contact-card:hover {
+  color: #0a192f !important;
+  text-decoration: none !important;
+}
+
+#footer-placeholder .whatsapp-contact-card strong {
+  color: #0a192f !important;
+}
+
+#footer-placeholder .whatsapp-contact-card small {
+  color: #64748b !important;
+}
+
+#footer-placeholder .whatsapp-contact-card .whatsapp-contact-icon {
+  color: #fff !important;
+}
+
+#footer-placeholder .whatsapp-contact-card .whatsapp-card-arrow {
+  color: #25d366 !important;
+}
+
+@media (min-width: 540px) {
+  .whatsapp-toggle-label { display: block; }
+  .whatsapp-toggle { padding: 0; background: transparent; box-shadow: none; gap: 8px; }
+  .whatsapp-toggle:hover { background: transparent; transform: none; }
+  .whatsapp-toggle .whatsapp-open-icon,
+  .whatsapp-toggle .whatsapp-close-icon { width: 56px; height: 56px; border-radius: 50%; display: grid; place-items: center; background: #25d366; box-shadow: 0 8px 22px rgba(37, 211, 102, 0.35); }
+  .whatsapp-toggle .whatsapp-close-icon { display: none; }
+  .whatsapp-toggle[aria-expanded="true"] .whatsapp-close-icon { display: grid; }
+}
+
+@media (max-width: 480px) {
+  .whatsapp-widget { right: 16px; bottom: 16px; }
+}
