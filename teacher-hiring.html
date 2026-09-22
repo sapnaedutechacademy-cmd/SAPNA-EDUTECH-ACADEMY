@@ -12,36 +12,22 @@
 
     <link rel="icon" type="image/png" href="upload/logo2.png">
 
-    <!-- EXACT SAME CSS FILES AS INDEX PAGE -->
+    <!-- FONT AWESOME & GLOBAL CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/Components.css">
 
     <style>
-        .teacher-wa-btn {
-            color: white !important;
-            background: linear-gradient(135deg, #0a192f 0%, #0c356a 100%) !important;
+        /* Base typography inheritance fix */
+        body {
+            font-family: var(--font-family, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif) !important;
+            color: var(--text-dark, #1e293b);
         }
-
-        /*
-         * IMPORTANT:
-         * Typography is NOT recreated here.
-         * This page deliberately reuses the same classes from index.html:
-         * .section-header
-         * .eyebrow-tag
-         * .section-title
-         * .section-subtitle
-         * .hero-title
-         * .hero-description
-         * .gg-card
-         * .gg-icon-wrapper
-         *
-         * Therefore font-size / font-family / font-weight remain controlled
-         * by the same CSS used by the Home Page.
-         */
 
         .teacher-hero {
             margin-top: 100px !important;
         }
+
         .teacher-page {
             width: 100%;
         }
@@ -83,7 +69,7 @@
             border-radius: 50%;
             border: 55px solid rgba(255, 196, 54, .12);
         }
-        
+
         .teacher-hero-grid {
             position: relative;
             z-index: 1;
@@ -115,8 +101,8 @@
             gap: 8px;
             padding: 11px 17px;
             border-radius: 8px;
-            background: #00ff66;
-            color: #061d18;
+            background: linear-gradient(135deg, #0a192f 0%, #0c356a 100%) !important;
+            color: #ffffff !important;
             text-decoration: none;
             font-size: inherit;
             font-weight: 600;
@@ -127,7 +113,7 @@
             margin-right: 1px;
         }
 
-        \n\n .teacher-wa-btn:hover {
+        .teacher-wa-btn:hover {
             transform: translateY(-2px);
         }
 
@@ -208,10 +194,6 @@
             background: #eef4f8;
         }
 
-        /*
-         * .section-header / .section-title / .section-subtitle
-         * are intentionally the SAME classes as index.html.
-         */
         .teacher-section-header {
             margin-bottom: 30px;
         }
@@ -229,7 +211,6 @@
             gap: 14px;
         }
 
-        /* Reuse Home's gg-card styling */
         .teacher-job-card {
             min-height: 100%;
         }
@@ -484,8 +465,7 @@
 
     <main class="teacher-page">
 
-
-        <!-- ======== 1. HERO Uses Home Page's hero-title + hero-description typography. ======== -->
+        <!-- ======== 1. HERO ======== -->
         <section class="teacher-hero">
             <div class="teacher-wrap teacher-hero-grid">
 
@@ -508,12 +488,11 @@
 
                     <div class="teacher-actions">
                         <a class="teacher-wa-btn"
-                            href="mailto:sapnaedutechacademy@gmail.com?subject=Teacher%20Position%20Inquiry&body=Hello%20Sapna%20Edutech%20Academy!%0A%0AI%20am%20interested%20in%20a%20teacher%20position.%20Please%20share%20the%20current%20vacancies%20and%20details.%0A%0ASubject%3A%20%0AQualification%3A%20%0ATeaching%20Experience%3A%20%0APreferred%20Role%3A%20%0A%0AThank%20you!"
+                            href="mailto:sapnaedutechacademy@gmail.com?subject=Teacher%20Position%20Inquiry&body=Hello%20Sapna%20Edutech%20Academy!%0A%0AI%20am%20interested%20in%20a%20teacher%20position.%20Please%20share%20the%20current%20vacancies%20and%20details.%0A%0ASubject%3A%20%0AQualification%3A%20%0ATeaching%20Experience%3A%20%0APpreferred%20Role%3A%20%0A%0AThank%20you!"
                             target="_blank" rel="noopener">
                             <i class="fa-solid fa-envelope"></i>
                             I'm Interested
                         </a>
-
 
                         <a class="teacher-outline-btn" href="#positions">
                             View Positions
@@ -522,13 +501,10 @@
                     </div>
                 </div>
 
-
                 <div class="teacher-hero-image-placeholder">
-                    <!-- Change this src whenever you want to use another hiring image -->
                     <img src="upload/we-are-hiring.webp" alt="Sapna Edutech Academy Faculty"
                         class="teacher-hiring-image">
 
-                    <!-- Fallback placeholder -->
                     <div class="teacher-placeholder-content">
                         <i class="fa-regular fa-image"></i>
                         <span>Teacher / Faculty Image</span>
@@ -539,8 +515,7 @@
             </div>
         </section>
 
-        <!-- ============  2. OPEN POSITION Uses Home Page's gg-card + gg-icon-wrapper classes.========== -->
-
+        <!-- ============ 2. OPEN POSITIONS ============ -->
         <section class="teacher-section" id="positions">
             <div class="teacher-wrap">
 
@@ -611,7 +586,7 @@
             </div>
         </section>
 
-        <!-- ========  3. WHAT WE LOOK FOR  ========= -->
+        <!-- ======== 3. WHAT WE LOOK FOR ======== -->
         <section class="teacher-section soft">
             <div class="teacher-wrap teacher-looking">
 
@@ -681,7 +656,7 @@
             </div>
         </section>
 
-        <!--======= 4. SIMPLE HIRING PROCESS ======= -->
+        <!-- ======= 4. SIMPLE HIRING PROCESS ======= -->
         <section class="teacher-section">
             <div class="teacher-wrap">
 
@@ -753,7 +728,6 @@
 
                     <div class="teacher-apply-action">
 
-                        <!-- EMAIL -->
                         <a class="teacher-wa-btn"
                             href="mailto:sapnaedutechacademy@gmail.com?subject=Teacher%20Enquiry&body=Hello%20Sapna%20Edutech%20Academy!%0A%0AI%20am%20interested%20in%20joining%20your%20teaching%20team.%0A%0ASubject%3A%20%0AQualification%3A%20%0ATeaching%20Experience%3A%20%0APreferred%20Role%3A%20%0A%0APlease%20share%20the%20current%20vacancies%20and%20next%20steps.%20Thank%20you!"
                             target="_blank" rel="noopener">
