@@ -146,7 +146,7 @@ body {
 }
 
 .admission-wa-btn:hover {
-  background: #20ba5a;
+  background: #25d366;
   transform: translateY(-2px);
 }
 
@@ -229,7 +229,7 @@ body {
   padding: 7px 14px;
   border-radius: 20px;
   background: rgba(0, 255, 102, 0.15);
-  color: #00ff66;
+  color: #25d366;
   font-size: 12px;
   font-weight: 700;
 }
