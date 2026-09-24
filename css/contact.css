@@ -274,6 +274,7 @@ a {
   }
 }
 
+
 @media (max-width: 576px) {
   /* Fix layout padding & alignment on mobile screens */
   .contact-hero,
